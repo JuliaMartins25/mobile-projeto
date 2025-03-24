@@ -1,7 +1,8 @@
 import { Stack } from "expo-router";
 import { TouchableOpacity, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Ionicons } from "@expo/vector-icons"; // Biblioteca de ícones do Expo
+import { Ionicons } from "@expo/vector-icons";
+
 
 
 export default function RootLayout() {
@@ -19,16 +20,16 @@ export default function RootLayout() {
             <Stack.Screen name="index"
                 options={{
                     headerTitle: () => {
-                        const navigation = useNavigation(); // Agora funciona aqui dentro!
+                        const navigation = useNavigation(); 
                         return (
 
                             <View style={{
                                 flexDirection: "row",  // Deixa Ícone e Texto lado a lado
                                 justifyContent: "space-between",
-                                alignItems: "center", // Alinha verticalmente no centro
+                                alignItems: "center", 
                                 width: "100%", // Garante que ocupe toda a largura da tela
                                 paddingHorizontal: 10 // Ajuste de espaçamento lateral
-                                
+
                             }}>
 
                                 <TouchableOpacity onPress={() => navigation.navigate('profile')}
@@ -65,5 +66,8 @@ export default function RootLayout() {
             />
 
         </Stack>
+
+        
     )
 }
+
