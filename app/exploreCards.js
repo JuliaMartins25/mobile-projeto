@@ -15,7 +15,7 @@ const data = [
     {
         id: "3",
         title: "Hidratações para deixar seu cabelo assim",
-        image: require("../assets/cabelo.png"), 
+        image: require("../assets/img3.png"), 
     },
     {
         id: "4",
@@ -25,7 +25,7 @@ const data = [
     {
         id: "5",
         title: "Produtos capilares que você precisa testar!",
-        image: require("../assets/cabelo.png"), 
+        image: require("../assets/img5.png"), 
     },
     {
         id: "6",
@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
         width: "48%", 
         height: 250,
         elevation: 3,
+        marginTop: 10,
     },
     imageCard: {
         width: "100%", 

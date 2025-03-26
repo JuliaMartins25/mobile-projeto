@@ -1,5 +1,5 @@
 import { Stack } from "expo-router";
-import { TouchableOpacity, Text, View } from "react-native";
+import { TouchableOpacity, Text, View, Image} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -20,13 +20,13 @@ export default function RootLayout() {
             <Stack.Screen name="index"
                 options={{
                     headerTitle: () => {
-                        const navigation = useNavigation(); 
+                        const navigation = useNavigation();
                         return (
 
                             <View style={{
                                 flexDirection: "row",  // Deixa Ícone e Texto lado a lado
                                 justifyContent: "space-between",
-                                alignItems: "center", 
+                                alignItems: "center",
                                 width: "100%", // Garante que ocupe toda a largura da tela
                                 paddingHorizontal: 10 // Ajuste de espaçamento lateral
 
@@ -51,11 +51,10 @@ export default function RootLayout() {
                                     </Text>
                                 </TouchableOpacity>
 
-
-                                <Text style={{ color: '#F96380', fontSize: 18 }}>
-                                    hair care
-                                </Text>
-
+                                <Image
+                                    source={require('../assets/logo.png')} 
+                                    style={{ width: 150, height: 40}} 
+                                />
 
 
                             </View>
@@ -67,7 +66,7 @@ export default function RootLayout() {
 
         </Stack>
 
-        
+
     )
 }
 
