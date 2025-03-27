@@ -34,9 +34,9 @@ const data = [
     },
 ];
 
+
 const ExploreCards = () => {
     return (
-        <View style={styles.container}>
             <FlatList
                 data={data}
                 keyExtractor={(item) => item.id}
@@ -49,17 +49,13 @@ const ExploreCards = () => {
                     </View>
                 )}
                 contentContainerStyle={styles.listContent}
+            
             />
-        </View>
-
+    
     );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 10,
-    },
     listContent: {
         paddingBottom: 20,
     },
@@ -72,7 +68,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         overflow: "hidden",
         width: "48%", 
-        height: 250,
+        height: 280,
         elevation: 3,
         marginTop: 10,
     },
