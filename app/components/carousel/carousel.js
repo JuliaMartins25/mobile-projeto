@@ -25,7 +25,7 @@ const Carousel = ({ data }) => {
         <Image
           source={{ uri: item.image }}
           style={styles.cardImage}
-          resizeMode="cover"
+          resizeMode="contain"
         />
         <View style={styles.cardContent}>
           <Text style={styles.cardTitle} numberOfLines={2}>
@@ -86,7 +86,7 @@ const Carousel = ({ data }) => {
           <Ionicons
             name="chevron-back-circle"
             size={36}
-            color={activeIndex === 0 ? "#ccc" : "#007AFF"}
+            color={activeIndex === 0 ? "#ccc" : "#EE5F7A"}
           />
         </TouchableOpacity>
 
@@ -113,7 +113,7 @@ const Carousel = ({ data }) => {
           <Ionicons
             name="chevron-forward-circle"
             size={36}
-            color={activeIndex === data.length - 1 ? "#ccc" : "#007AFF"}
+            color={activeIndex === data.length - 1 ? "#ccc" : "#EE5F7A"}
           />
         </TouchableOpacity>
       </View>
@@ -124,7 +124,7 @@ const Carousel = ({ data }) => {
             key={index}
             style={[
               styles.paginationDot,
-              { backgroundColor: index === activeIndex ? "#007AFF" : "#ccc" },
+              { backgroundColor: index === activeIndex ? "#EE5F7A" : "#ccc" },
             ]}
           />
         ))}
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     height: 300,
     marginHorizontal: SPACING / 2,
     borderRadius: 15,
-    backgroundColor: "#fff",
+    backgroundColor: "#FFDEE9",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -170,6 +170,7 @@ const styles = StyleSheet.create({
   cardImage: {
     width: "100%",
     height: 150,
+    
   },
   cardContent: {
     padding: 15,
@@ -197,12 +198,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: "#999",
   },
-  readMoreButton: {
-    paddingVertical: 5,
-    paddingHorizontal: 10,
-    backgroundColor: "#007AFF",
-    borderRadius: 20,
-  },
+
   readMoreText: {
     color: "#fff",
     fontSize: 12,

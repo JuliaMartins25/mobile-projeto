@@ -49,6 +49,7 @@ const ExploreCards = () => {
                     </View>
                 )}
                 contentContainerStyle={styles.listContent}
+                scrollEnabled={false}
             
             />
     
