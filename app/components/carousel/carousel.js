@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
   },
   navButton: {
     position: "absolute",
-    top: "50%",
+    top: "40%",
     zIndex: 10,
     marginTop: -18,
   },
