@@ -168,9 +168,12 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   cardImage: {
-    width: "100%",
+    width: 150,
     height: 150,
-    
+    borderRadius: 30,
+    alignSelf: 'center',
+    marginTop: 10,
+
   },
   cardContent: {
     padding: 15,
