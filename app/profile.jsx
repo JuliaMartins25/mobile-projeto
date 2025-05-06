@@ -7,16 +7,12 @@ export default function Profile() {
     return (
         <ScrollView style={styles.container}>
             <View style={styles.header}>
-                <TouchableOpacity style={styles.iconButton}>
-
-                </TouchableOpacity>
+                <TouchableOpacity style={styles.iconButton} />
                 <Image 
                     source={{ uri: "https://i.ibb.co/Kzmhb4YV/download.png" }} 
                     style={styles.image} 
                 />
-                <TouchableOpacity style={styles.iconButton}>
-            
-                </TouchableOpacity>
+                <TouchableOpacity style={styles.iconButton} />
             </View>
             <Text style={styles.username}>Usuário123</Text>
             <TouchableOpacity style={styles.editButton}>
@@ -45,19 +41,20 @@ export default function Profile() {
                         </TouchableOpacity>
                     </View>
                     <Text style={styles.sectionTitle}>Fotos adicionadas recentemente</Text>
-                    <View style={styles.photoRow}>
+                    <View style={[styles.photoRow, { marginTop: 10 }]}>
                         <View style={styles.photoCard}>
                             <Image 
-                                source={{ uri: "https://via.placeholder.com/100" }} 
+                                source={{ uri: "https://www.fiquediva.com.br/-/media/project/loreal/brand-sites/fiquediva/usa/pt-br/articles/blog/2025/transformacao-capilar/cortes-de-cabelo/cortes-femininos-2025/mulher-cabelo-longo-castanho-2025.jpg?la=pt-br&rev=65bcddd1ea794df6b58c9f0e3bbfa92e&hash=46BB1F77358CA3808A7A1F290AD055AE" }} 
                                 style={styles.photo} 
                             />
-                          
+                            <Text style={styles.photoLabel}>ONTEM 16:21</Text>
                         </View>
                         <View style={styles.photoCard}>
                             <Image 
-                                source={{ uri: "https://via.placeholder.com/100" }} 
+                                source={{ uri: "https://media.istockphoto.com/id/1312807901/pt/foto/beautiful-woman-with-long-straight-hair-blond-girl.jpg?s=612x612&w=0&k=20&c=ctnS4vx-_ZWhkzEMhTa_kk9k4jgHmh-h9si-yyje9vY=" }} 
                                 style={styles.photo} 
                             />
+                            <Text style={styles.photoLabel}>SÁBADO 19:41</Text>
                         </View>
                     </View>
                 </View>
@@ -88,10 +85,6 @@ const styles = StyleSheet.create({
     },
     iconButton: {
         padding: 10,
-    },
-    iconText: {
-        fontSize: 20,
-        color: "#333",
     },
     image: {
         width: 100,
@@ -170,8 +163,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     photo: {
-        width: 100,
-        height: 100,
+        width: 250,
+        height: 200,
         borderRadius: 10,
         marginBottom: 5,
     },
