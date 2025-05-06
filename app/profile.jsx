@@ -1,104 +1,197 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
 
 export default function Profile() {
     const [activeTab, setActiveTab] = useState("galeria"); // Estado para alternar entre galeria e quiz
 
     return (
-        <View style={styles.container}>
-            <Image 
-                source={{ uri: "https://i.ibb.co/Kzmhb4YV/download.png" }} 
-                style={styles.image} 
-            />
-            <Text style={styles.text}>Nome do Usuário</Text>
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>Editar Perfil</Text>
+        <ScrollView style={styles.container}>
+            <View style={styles.header}>
+                <TouchableOpacity style={styles.iconButton} />
+                <Image 
+                    source={{ uri: "https://i.ibb.co/Kzmhb4YV/download.png" }} 
+                    style={styles.image} 
+                />
+                <TouchableOpacity style={styles.iconButton} />
+            </View>
+            <Text style={styles.username}>Usuário123</Text>
+            <TouchableOpacity style={styles.editButton}>
+                <Text style={styles.editButtonText}>Editar perfil</Text>
             </TouchableOpacity>
-            <View style={styles.row}>
-                {/* Botão para alternar para a galeria */}
+            <View style={styles.tabRow}>
                 <TouchableOpacity onPress={() => setActiveTab("galeria")}>
-                    <Text style={[styles.galeryText, activeTab === "galeria" && styles.activeTab]}>
+                    <Text style={[styles.tabText, activeTab === "galeria" && styles.activeTab]}>
                         Galeria
                     </Text>
                 </TouchableOpacity>
-                {/* Botão para alternar para os quizzes */}
                 <TouchableOpacity onPress={() => setActiveTab("quiz")}>
-                    <Text style={[styles.galeryText, activeTab === "quiz" && styles.activeTab]}>
-                        Quiz Salvos
+                    <Text style={[styles.tabText, activeTab === "quiz" && styles.activeTab]}>
+                        Quiz salvos
                     </Text>
                 </TouchableOpacity>
             </View>
-            {/* Renderização condicional com base no estado activeTab */}
             {activeTab === "galeria" ? (
-                <View style={styles.galeria}>
+                <View style={styles.content}>
                     <View style={styles.row}>
-                        <Text style={styles.galeryText}>Adicionar fotos</Text>
-                        <Text style={styles.galeryText}>Adicionar pastas</Text>
+                        <TouchableOpacity style={styles.addButton}>
+                            <Text style={styles.addButtonText}>Adicionar fotos</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.addButton}>
+                            <Text style={styles.addButtonText}>Adicionar pastas</Text>
+                        </TouchableOpacity>
                     </View>
+                    <Text style={styles.sectionTitle}>Fotos adicionadas recentemente</Text>
+                    <ScrollView 
+                        horizontal 
+                        showsHorizontalScrollIndicator={false} 
+                        style={[styles.photoRow, { marginTop: 10 }]}
+                    >
+                        <View style={styles.photoCard}>
+                            <Image 
+                                source={{ uri: "https://www.fiquediva.com.br/-/media/project/loreal/brand-sites/fiquediva/usa/pt-br/articles/blog/2025/transformacao-capilar/cortes-de-cabelo/cortes-femininos-2025/mulher-cabelo-longo-castanho-2025.jpg?la=pt-br&rev=65bcddd1ea794df6b58c9f0e3bbfa92e&hash=46BB1F77358CA3808A7A1F290AD055AE" }} 
+                                style={styles.photo} 
+                            />
+                            <Text style={styles.photoLabel}>ONTEM 16:21</Text>
+                        </View>
+                        <View style={styles.photoCard}>
+                            <Image 
+                                source={{ uri: "https://media.istockphoto.com/id/1312807901/pt/foto/beautiful-woman-with-long-straight-hair-blond-girl.jpg?s=612x612&w=0&k=20&c=ctnS4vx-_ZWhkzEMhTa_kk9k4jgHmh-h9si-yyje9vY=" }} 
+                                style={styles.photo} 
+                            />
+                            <Text style={styles.photoLabel}>SÁBADO 19:41</Text>
+                        </View>
+                        <View style={styles.photoCard}>
+                            <Image 
+                                source={{ uri: "https://inspiracabelo.com.br/wp-content/uploads/2024/03/corte-de-cabelo-feminino-degrade-repicado-16.jpg" }} 
+                                style={styles.photo} 
+                            />
+                            <Text style={styles.photoLabel}>SEXTA 14:30</Text>
+                        </View>
+                        <View style={styles.photoCard}>
+                            <Image 
+                                source={{ uri: "https://dicasdecabelo.com.br/wp-content/uploads/2023/04/cortes-de-cabelo-feminino-liso09-1.jpg" }} 
+                                style={styles.photo} 
+                            />
+                            <Text style={styles.photoLabel}>QUINTA 10:15</Text>
+                        </View>
+                    </ScrollView>
                 </View>
             ) : (
-                <View style={styles.galeria}>
+                <View style={styles.content}>
+                    <Text style={styles.sectionTitle}>Quizzes salvos</Text>
                     <View style={styles.row}>
-                        <Text style={styles.galeryText}>Quiz 1</Text>
-                        <Text style={styles.galeryText}>Quiz 2</Text>
-                        <Text style={styles.galeryText}>Quiz 3</Text>
+                        <Text style={styles.quizText}>Quiz 1</Text>
+                        <Text style={styles.quizText}>Quiz 2</Text>
+                        <Text style={styles.quizText}>Quiz 3</Text>
                     </View>
                 </View>
             )}
-        </View>
+        </ScrollView>
     ); 
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "flex-start", // Alinha os itens no topo
+        backgroundColor: "white", // Fundo azul claro
+    },
+    header: {
+        flexDirection: "row",
+        justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: "#f5f5f5",
-        paddingTop: 20, // Adiciona um espaçamento no topo
+        padding: 10,
+    },
+    iconButton: {
+        padding: 10,
     },
     image: {
-        width: 120,
-        height: 120,
-        borderRadius: 75,
-        marginBottom: 20, // Adiciona um espaçamento entre a imagem e o texto
-    },
-    button: {
-        backgroundColor: "#F96380", // Cor azul
-        paddingVertical: 10,
-        paddingHorizontal: 20,
+        width: 100,
+        height: 100,
         borderRadius: 50,
+    },
+    username: {
+        fontSize: 22,
+        fontWeight: "bold",
+        textAlign: "center",
+        marginTop: 10,
+        color: "#333",
+    },
+    editButton: {
+        alignSelf: "center",
+        backgroundColor: "#F96380",
+        paddingVertical: 8,
+        paddingHorizontal: 20,
+        borderRadius: 20,
         marginTop: 10,
     },
-    buttonText: {
-        color: "#fff", // Cor do texto branco
+    editButtonText: {
+        color: "#fff",
         fontSize: 16,
         fontWeight: "bold",
     },
-    row: {
-        flexDirection: "row", // Coloca os itens lado a lado
-        justifyContent: "space-between", // Espaçamento entre os itens
-        width: "80%", // Define a largura do container
+    tabRow: {
+        flexDirection: "row",
+        justifyContent: "space-around",
+        backgroundColor: "#fff",
+        paddingVertical: 10,
         marginTop: 20,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
     },
-    galeryText: {
-        fontSize: 20,
+    tabText: {
+        fontSize: 18,
         color: "#333",
     },
     activeTab: {
         fontWeight: "bold",
         textDecorationLine: "underline",
+        color: "#F96380",
     },
-    text: {
-        fontSize: 20,
+    content: {
+        backgroundColor: "#FFDEE9", // Fundo rosa
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        padding: 20,
+    },
+    row: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginBottom: 20,
+    },
+    addButton: {
+        backgroundColor: "#F96380",
+        padding: 10,
+        borderRadius: 10,
+    },
+    addButtonText: {
+        color: "#fff",
+        fontSize: 16,
+    },
+    sectionTitle: {
+        fontSize: 18,
+        fontWeight: "bold",
+        marginBottom: 10,
         color: "#333",
     },
-    galeria: {
-        marginTop: 20,
-        padding: 10,
-        backgroundColor: "#FFDEE9", // Fundo rosa
-        borderRadius: 10,
-        width: "80%", // Ajusta a largura do container
+    photoRow: {
+        flexDirection: "row",
+    },
+    photoCard: {
         alignItems: "center",
+        marginRight: 15,
+    },
+    photo: {
+        width: 250,
+        height: 200,
+        borderRadius: 10,
+        marginBottom: 5,
+    },
+    photoLabel: {
+        fontSize: 12,
+        color: "#333",
+    },
+    quizText: {
+        fontSize: 16,
+        color: "#333",
     },
 });
