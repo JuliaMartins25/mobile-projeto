@@ -1,21 +1,26 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Profile() {
-    const [activeTab, setActiveTab] = useState("galeria"); // Estado para alternar entre galeria e quiz
+    const [activeTab, setActiveTab] = useState("galeria");
+    const navigation = useNavigation();
 
     return (
         <ScrollView style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity style={styles.iconButton} />
-                <Image 
-                    source={{ uri: "https://i.ibb.co/Kzmhb4YV/download.png" }} 
-                    style={styles.image} 
+                <Image
+                    source={{ uri: "https://i.ibb.co/Kzmhb4YV/download.png" }}
+                    style={styles.image}
                 />
                 <TouchableOpacity style={styles.iconButton} />
             </View>
             <Text style={styles.username}>Usuário123</Text>
-            <TouchableOpacity style={styles.editButton}>
+            <TouchableOpacity
+                style={styles.editButton}
+                onPress={() => navigation.navigate("editProfile")}
+            >
                 <Text style={styles.editButtonText}>Editar perfil</Text>
             </TouchableOpacity>
             <View style={styles.tabRow}>
@@ -41,36 +46,36 @@ export default function Profile() {
                         </TouchableOpacity>
                     </View>
                     <Text style={styles.sectionTitle}>Fotos adicionadas recentemente</Text>
-                    <ScrollView 
-                        horizontal 
-                        showsHorizontalScrollIndicator={false} 
+                    <ScrollView
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
                         style={[styles.photoRow, { marginTop: 10 }]}
                     >
                         <View style={styles.photoCard}>
-                            <Image 
-                                source={{ uri: "https://www.fiquediva.com.br/-/media/project/loreal/brand-sites/fiquediva/usa/pt-br/articles/blog/2025/transformacao-capilar/cortes-de-cabelo/cortes-femininos-2025/mulher-cabelo-longo-castanho-2025.jpg?la=pt-br&rev=65bcddd1ea794df6b58c9f0e3bbfa92e&hash=46BB1F77358CA3808A7A1F290AD055AE" }} 
-                                style={styles.photo} 
+                            <Image
+                                source={{ uri: "https://www.fiquediva.com.br/-/media/project/loreal/brand-sites/fiquediva/usa/pt-br/articles/blog/2025/transformacao-capilar/cortes-de-cabelo/cortes-femininos-2025/mulher-cabelo-longo-castanho-2025.jpg?la=pt-br&rev=65bcddd1ea794df6b58c9f0e3bbfa92e&hash=46BB1F77358CA3808A7A1F290AD055AE" }}
+                                style={styles.photo}
                             />
                             <Text style={styles.photoLabel}>ONTEM 16:21</Text>
                         </View>
                         <View style={styles.photoCard}>
-                            <Image 
-                                source={{ uri: "https://media.istockphoto.com/id/1312807901/pt/foto/beautiful-woman-with-long-straight-hair-blond-girl.jpg?s=612x612&w=0&k=20&c=ctnS4vx-_ZWhkzEMhTa_kk9k4jgHmh-h9si-yyje9vY=" }} 
-                                style={styles.photo} 
+                            <Image
+                                source={{ uri: "https://media.istockphoto.com/id/1312807901/pt/foto/beautiful-woman-with-long-straight-hair-blond-girl.jpg?s=612x612&w=0&k=20&c=ctnS4vx-_ZWhkzEMhTa_kk9k4jgHmh-h9si-yyje9vY=" }}
+                                style={styles.photo}
                             />
                             <Text style={styles.photoLabel}>SÁBADO 19:41</Text>
                         </View>
                         <View style={styles.photoCard}>
-                            <Image 
-                                source={{ uri: "https://inspiracabelo.com.br/wp-content/uploads/2024/03/corte-de-cabelo-feminino-degrade-repicado-16.jpg" }} 
-                                style={styles.photo} 
+                            <Image
+                                source={{ uri: "https://inspiracabelo.com.br/wp-content/uploads/2024/03/corte-de-cabelo-feminino-degrade-repicado-16.jpg" }}
+                                style={styles.photo}
                             />
                             <Text style={styles.photoLabel}>SEXTA 14:30</Text>
                         </View>
                         <View style={styles.photoCard}>
-                            <Image 
-                                source={{ uri: "https://dicasdecabelo.com.br/wp-content/uploads/2023/04/cortes-de-cabelo-feminino-liso09-1.jpg" }} 
-                                style={styles.photo} 
+                            <Image
+                                source={{ uri: "https://dicasdecabelo.com.br/wp-content/uploads/2023/04/cortes-de-cabelo-feminino-liso09-1.jpg" }}
+                                style={styles.photo}
                             />
                             <Text style={styles.photoLabel}>QUINTA 10:15</Text>
                         </View>
@@ -87,13 +92,13 @@ export default function Profile() {
                 </View>
             )}
         </ScrollView>
-    ); 
+    );
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "white", // Fundo azul claro
+        backgroundColor: "white",
     },
     header: {
         flexDirection: "row",
@@ -144,11 +149,12 @@ const styles = StyleSheet.create({
     },
     activeTab: {
         fontWeight: "bold",
-        textDecorationLine: "underline",
         color: "#F96380",
+        borderBottomWidth: 2,
+        borderBottomColor: "#F96380",
     },
     content: {
-        backgroundColor: "#FFDEE9", // Fundo rosa
+        backgroundColor: "#FFDEE9",
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         padding: 20,
