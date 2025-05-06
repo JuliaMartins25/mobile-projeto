@@ -41,7 +41,11 @@ export default function Profile() {
                         </TouchableOpacity>
                     </View>
                     <Text style={styles.sectionTitle}>Fotos adicionadas recentemente</Text>
-                    <View style={[styles.photoRow, { marginTop: 10 }]}>
+                    <ScrollView 
+                        horizontal 
+                        showsHorizontalScrollIndicator={false} 
+                        style={[styles.photoRow, { marginTop: 10 }]}
+                    >
                         <View style={styles.photoCard}>
                             <Image 
                                 source={{ uri: "https://www.fiquediva.com.br/-/media/project/loreal/brand-sites/fiquediva/usa/pt-br/articles/blog/2025/transformacao-capilar/cortes-de-cabelo/cortes-femininos-2025/mulher-cabelo-longo-castanho-2025.jpg?la=pt-br&rev=65bcddd1ea794df6b58c9f0e3bbfa92e&hash=46BB1F77358CA3808A7A1F290AD055AE" }} 
@@ -56,7 +60,21 @@ export default function Profile() {
                             />
                             <Text style={styles.photoLabel}>SÁBADO 19:41</Text>
                         </View>
-                    </View>
+                        <View style={styles.photoCard}>
+                            <Image 
+                                source={{ uri: "https://inspiracabelo.com.br/wp-content/uploads/2024/03/corte-de-cabelo-feminino-degrade-repicado-16.jpg" }} 
+                                style={styles.photo} 
+                            />
+                            <Text style={styles.photoLabel}>SEXTA 14:30</Text>
+                        </View>
+                        <View style={styles.photoCard}>
+                            <Image 
+                                source={{ uri: "https://dicasdecabelo.com.br/wp-content/uploads/2023/04/cortes-de-cabelo-feminino-liso09-1.jpg" }} 
+                                style={styles.photo} 
+                            />
+                            <Text style={styles.photoLabel}>QUINTA 10:15</Text>
+                        </View>
+                    </ScrollView>
                 </View>
             ) : (
                 <View style={styles.content}>
@@ -157,10 +175,10 @@ const styles = StyleSheet.create({
     },
     photoRow: {
         flexDirection: "row",
-        justifyContent: "space-between",
     },
     photoCard: {
         alignItems: "center",
+        marginRight: 15,
     },
     photo: {
         width: 250,
