@@ -24,7 +24,7 @@ const data = [
         id: "4",
         title: "Qual o corte de cabelo da moda que mais combina com você?",
         image: require("../assets/img4.png"),
-        link: "https://www.loreal-paris.com.br/teste-qual-o-corte-de-cabelo-da-moda-que-mais-combina-com-voce-responda-as-perguntas-e-descubra",
+        link: ("../app/content/card4.jsx"),
     },
     {
         id: "5",
