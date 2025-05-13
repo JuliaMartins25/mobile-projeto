@@ -30,6 +30,7 @@ export default function RootLayout() {
     return (
         <Stack screenOptions={{
             headerShown: true,
+            title: "Perfil",
             headerStyle: {
                 backgroundColor: '#A4C4F2',
             },
