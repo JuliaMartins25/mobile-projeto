@@ -31,7 +31,7 @@ export default function Profile() {
             <Text style={styles.username}>Usuário123</Text>
             <TouchableOpacity
                 style={styles.editButton}
-                onPress={() => navigation.navigate("Perfil")}
+                onPress={() => navigation.navigate("editProfile")} 
             >
                 <Text style={styles.editButtonText}>Editar perfil</Text>
             </TouchableOpacity>
