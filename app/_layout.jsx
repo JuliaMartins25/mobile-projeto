@@ -1,11 +1,32 @@
 import { Stack } from "expo-router";
-import { TouchableOpacity, Text, View, Image} from "react-native";
+import { TouchableOpacity, Text, View, Image, Animated, Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
-
-
+import { useState, useRef } from "react";
 
 export default function RootLayout() {
+    const [menuOpen, setMenuOpen] = useState(false); // Estado para controlar o menu
+    const slideAnim = useRef(new Animated.Value(-Dimensions.get("window").width)).current; // Animação da sidebar
+
+    const toggleMenu = () => {
+        if (menuOpen) {
+            // Fechar menu
+            Animated.timing(slideAnim, {
+                toValue: -Dimensions.get("window").width,
+                duration: 300,
+                useNativeDriver: true,
+            }).start(() => setMenuOpen(false));
+        } else {
+            // Abrir menu
+            setMenuOpen(true);
+            Animated.timing(slideAnim, {
+                toValue: 0,
+                duration: 300,
+                useNativeDriver: true,
+            }).start();
+        }
+    };
+
     return (
         <Stack screenOptions={{
             headerShown: true,
@@ -22,51 +43,58 @@ export default function RootLayout() {
                     headerTitle: () => {
                         const navigation = useNavigation();
                         return (
-
                             <View style={{
-                                flexDirection: "row",  // Deixa Ícone e Texto lado a lado
+                                flexDirection: "row",
                                 justifyContent: "space-between",
                                 alignItems: "center",
-                                width: "100%", // Garante que ocupe toda a largura da tela
-                                paddingHorizontal: 10 // Ajuste de espaçamento lateral
-
+                                width: "100%",
+                                paddingHorizontal: 20,
                             }}>
-
-                                <TouchableOpacity onPress={() => navigation.navigate('profile')}
-                                    style={{
-                                        flexDirection: "row",  // Deixa Ícone e Texto lado a lado
-                                        alignItems: "center", // Alinha verticalmente no centro
-                                    }}
-                                >
-
+                                <TouchableOpacity onPress={toggleMenu}>
                                     <Ionicons
-                                        name="person-circle-outline"  // Ícone de perfil
-                                        size={24}
+                                        name="menu-outline"
+                                        size={30}
                                         color="#fff"
-                                        style={{ marginRight: 5 }} // Adiciona espaçamento entre ícone e texto
                                     />
-
-                                    <Text style={{ color: '#fff', fontWeight: 'bold', fontSize: 18 }}>
-                                        Olá, usuário123
-                                    </Text>
                                 </TouchableOpacity>
 
                                 <Image
-                                    source={require('../assets/logo.png')} 
-                                    style={{ width: 150, height: 40}} 
+                                    source={require('../assets/logo.png')}
+                                    style={{ width: 150, height: 40 }}
                                 />
 
-
+                                {menuOpen && (
+                                    <Animated.View style={{
+                                        position: "absolute",
+                                        top: 45,
+                                        left: -15,
+                                        height: "20rem",
+                                        width: "10rem",
+                                        backgroundColor: "#fff",
+                                        transform: [{ translateX: slideAnim }],
+                                        zIndex: 10,
+                                        padding: 20,
+                                    }}>
+                                        <TouchableOpacity onPress={toggleMenu}>
+                                            <Ionicons
+                                                name="close-outline"
+                                                size={30}
+                                                color="#000"
+                                            />
+                                        </TouchableOpacity>
+                                        <TouchableOpacity onPress={() => {
+                                            navigation.navigate('profile');
+                                            toggleMenu();
+                                        }}>
+                                            <Text style={{ fontSize: 18, color: "#000", marginVertical: 20 }}>Ir para Perfil</Text>
+                                        </TouchableOpacity>
+                                    </Animated.View>
+                                )}
                             </View>
                         );
                     }
                 }}
-
             />
-
         </Stack>
-
-
-    )
+    );
 }
-
