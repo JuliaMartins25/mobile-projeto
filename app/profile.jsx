@@ -106,37 +106,6 @@ export default function Profile() {
                 </View>
             )}
 
-            {/* Modal do menu hambúrguer */}
-            <Modal
-                visible={menuVisible}
-                transparent={true}
-                animationType="slide"
-                onRequestClose={() => setMenuVisible(false)}
-            >
-                <View style={styles.menuContainer}>
-                    <View style={styles.menu}>
-                        <TouchableOpacity
-                            style={styles.closeButton}
-                            onPress={() => setMenuVisible(false)}
-                        >
-                            <Ionicons name="close" size={28} color="#333" />
-                        </TouchableOpacity>
-                        <Text style={styles.menuTitle}>Menu</Text>
-                        <TouchableOpacity style={styles.menuItem}>
-                            <Text style={styles.menuItemText}>Perfil</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.menuItem}>
-                            <Text style={styles.menuItemText}>Configurações</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.menuItem}>
-                            <Text style={styles.menuItemText}>Ajuda</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.menuItem}>
-                            <Text style={styles.menuItemText}>Sair</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </Modal>
         </ScrollView>
     );
 }
@@ -144,7 +113,7 @@ export default function Profile() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "white",
+        backgroundColor: "#A2D2FF",
     },
     header: {
         flexDirection: "row",
@@ -187,7 +156,6 @@ const styles = StyleSheet.create({
     tabRow: {
         flexDirection: "row",
         justifyContent: "space-around",
-        backgroundColor: "#fff",
         paddingVertical: 10,
         marginTop: 20,
         borderTopLeftRadius: 20,
@@ -204,7 +172,7 @@ const styles = StyleSheet.create({
         borderBottomColor: "#F96380",
     },
     content: {
-        backgroundColor: "#FFDEE9",
+        backgroundColor: "#FFAFCC",
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         padding: 20,
@@ -250,33 +218,5 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: "#333",
     },
-    menuContainer: {
-        flex: 1,
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-        justifyContent: "flex-end",
-    },
-    menu: {
-        backgroundColor: "white",
-        padding: 20,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-    },
-    closeButton: {
-        alignSelf: "flex-end",
-    },
-    menuTitle: {
-        fontSize: 20,
-        fontWeight: "bold",
-        marginBottom: 20,
-        color: "#333",
-    },
-    menuItem: {
-        paddingVertical: 15,
-        borderBottomWidth: 1,
-        borderBottomColor: "#ddd",
-    },
-    menuItemText: {
-        fontSize: 16,
-        color: "#333",
-    },
+  
 });

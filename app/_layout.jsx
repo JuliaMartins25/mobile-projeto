@@ -32,7 +32,7 @@ export default function RootLayout() {
             headerShown: true,
             title: "Perfil",
             headerStyle: {
-                backgroundColor: '#A4C4F2',
+                backgroundColor: '#A2D2FF',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -71,7 +71,7 @@ export default function RootLayout() {
                                         left: -15,
                                         height: "20rem",
                                         width: "10rem",
-                                        backgroundColor: "#fff",
+                                        backgroundColor: "#F96380",
                                         transform: [{ translateX: slideAnim }],
                                         zIndex: 10,
                                         padding: 20,

@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
     },
     menu: {
-        backgroundColor: "white",
+        backgroundColor: "#FFAFCC",
         padding: 20,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,

@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15, 
     },
     card: {
-        backgroundColor: '#FFDEE9', // Rosa claro
+        backgroundColor: '#FFAFCC', // Rosa claro
         paddingVertical: 10, 
         paddingHorizontal: 25,
         borderRadius: 20, 

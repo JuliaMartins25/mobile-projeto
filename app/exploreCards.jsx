@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
         marginBottom: 30, 
     },
     card: {
-        backgroundColor: "#FFDEE9",
+        backgroundColor: "#FFAFCC", // Rosa claro
         borderRadius: 10,
         overflow: "hidden",
         width: "48%",

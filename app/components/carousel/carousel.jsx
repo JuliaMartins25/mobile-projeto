@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     height: 300,
     marginHorizontal: SPACING / 2,
     borderRadius: 15,
-    backgroundColor: "#FFDEE9",
+    backgroundColor: "#FFAFCC",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
