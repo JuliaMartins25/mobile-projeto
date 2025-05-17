@@ -29,6 +29,7 @@ export default function Profile() {
             </View>
 
             <Text style={styles.username}>Usuário123</Text>
+            <Text style={styles.bio}>aqui neste app estou começando a cuidar do meu cabelo</Text>
             <TouchableOpacity
                 style={styles.editButton}
                 onPress={() => navigation.navigate("editProfile")} 
@@ -42,11 +43,7 @@ export default function Profile() {
                         Galeria
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => setActiveTab("quiz")}>
-                    <Text style={[styles.tabText, activeTab === "quiz" && styles.activeTab]}>
-                        Quiz salvos
-                    </Text>
-                </TouchableOpacity>
+               
             </View>
 
             {activeTab === "galeria" ? (
@@ -54,9 +51,6 @@ export default function Profile() {
                     <View style={styles.row}>
                         <TouchableOpacity style={styles.addButton}>
                             <Text style={styles.addButtonText}>Adicionar fotos</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.addButton}>
-                            <Text style={styles.addButtonText}>Adicionar pastas</Text>
                         </TouchableOpacity>
                     </View>
                     <Text style={styles.sectionTitle}>Fotos adicionadas recentemente</Text>
@@ -97,12 +91,6 @@ export default function Profile() {
                 </View>
             ) : (
                 <View style={styles.content}>
-                    <Text style={styles.sectionTitle}>Quizzes salvos</Text>
-                    <View style={styles.row}>
-                        <Text style={styles.quizText}>Quiz 1</Text>
-                        <Text style={styles.quizText}>Quiz 2</Text>
-                        <Text style={styles.quizText}>Quiz 3</Text>
-                    </View>
                 </View>
             )}
 
@@ -136,6 +124,12 @@ const styles = StyleSheet.create({
     username: {
         fontSize: 22,
         fontWeight: "bold",
+        textAlign: "center",
+        marginTop: 10,
+        color: "#333",
+    },
+    bio: {
+        fontSize: 10,
         textAlign: "center",
         marginTop: 10,
         color: "#333",
@@ -214,9 +208,4 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: "#333",
     },
-    quizText: {
-        fontSize: 16,
-        color: "#333",
-    },
-  
 });

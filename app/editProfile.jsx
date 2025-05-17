@@ -1,51 +1,68 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, Alert, TextInput } from "react-native";
+
 
 export default function EditProfile() {
+    const changePhoto = () => {
+        Alert.alert("Trocar foto de perfil", "Selecione uma nova foto de perfil", [
+            { text: "Remover foto atual", onPress: () => console.log("Remover foto") },
+            { text: "Galeria", onPress: () => console.log("Abrir galeria") },
+            { text: "Câmera", onPress: () => console.log("Abrir câmera") },
+            { text: "Cancelar", style: "cancel" },
+        ]);
+    };
+    
+
+        const button = () => {
+            console.log("Alterações salvas!");
+            Alert.alert("Sucesso", "Suas alterações foram salvas!");
+        };
+        
     return (
         <View style={styles.container}>
-            {/* Cabeçalho */}
-            <View style={styles.header}>
+
+            <TouchableOpacity onPress={changePhoto} style={styles.avatarContainer}>
                 <Image
                     source={{ uri: "https://i.ibb.co/Kzmhb4YV/download.png" }}
                     style={styles.image}
                 />
-                <Text style={styles.username}>Usuário</Text>
-            </View>
-
-            {/* Botão de editar perfil */}
-            <TouchableOpacity style={styles.editButton}>
-                <Text style={styles.editButtonText}>Editar perfil</Text>
+                <Text style={styles.username}>Trocar foto de perfil</Text>
             </TouchableOpacity>
 
-            {/* Opções */}
+
             <View style={styles.options}>
-                <TouchableOpacity style={styles.optionButton}>
-                    <Text style={styles.optionText}>Trocar a Foto</Text>
-                    <Text style={styles.subText}>Fazer Upload</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.optionButton}>
-                    <Text style={styles.optionText}>Trocar o Nome de Usuário</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.optionButton}>
-                    <Text style={styles.optionText}>Central de Ajuda</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.optionButton}>
-                    <Text style={styles.optionText}>Mudar Para Tema Escuro</Text>
-                </TouchableOpacity>
+                <Text style={styles.optionText}>Nome</Text>
+                <TextInput style={styles.input} placeholder="Digite seu nome" />
             </View>
+            <View style={styles.options}>
+                <Text style={styles.optionText}>Nome de usuário</Text>
+                <TextInput style={styles.input} placeholder="@novousuario123" />
+            </View>
+            <View style={styles.options}>
+                <Text style={styles.optionText}>Bio</Text>
+                <TextInput style={styles.input} placeholder="Nova Biografia" />
+            </View>
+
+            <TouchableOpacity style={styles.saveButton} onPress={button}>
+                <Text style={styles.saveButtonText}>Salvar alterações</Text>
+            </TouchableOpacity>
+
         </View>
     );
 }
 
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "white",
+        paddingTop: 40,
+        paddingBottom: 80,
+        paddingHorizontal: 20,
+        backgroundColor: "#A2D2FF",
         alignItems: "center",
         paddingTop: 50,
     },
-    header: {
+    avatarContainer: {
         alignItems: "center",
         marginBottom: 20,
     },
@@ -61,39 +78,38 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
         marginTop: 10,
-        color: "#333",
-    },
-    editButton: {
-        backgroundColor: "#F96380",
-        paddingVertical: 8,
-        paddingHorizontal: 20,
-        borderRadius: 20,
-        marginTop: 10,
-    },
-    editButtonText: {
-        color: "#fff",
-        fontSize: 16,
-        fontWeight: "bold",
+        color: "#F96380",
     },
     options: {
-        marginTop: 30,
-        width: "90%",
+        marginBottom: 20,
+        borderRadius: 10,
+        width: "100%",
+        backgroundColor: "white",
     },
-    optionButton: {
-        backgroundColor: "#F96380",
-        paddingVertical: 15,
-        borderRadius: 25,
-        marginBottom: 15,
-        alignItems: "center",
+    input: {
+        borderBottomWidth: 1,
+        borderBottomColor: "#ccc",
+        paddingVertical: 6,
+        fontSize: 16,
+        color: "#C4C4C4"
     },
     optionText: {
+        color: "#F96380",
+        borderBottomWidth: 1,
+        borderBottomColor: "#F96380",
+        paddingVertical: 6,
+        fontSize: 16,
+    },
+    saveButton: {
+        backgroundColor: "#F96380",
+        paddingVertical: 12,
+        paddingHorizontal: 30,
+        borderRadius: 25,
+        marginTop: 20,
+    },
+    saveButtonText: {
         color: "#fff",
         fontSize: 18,
         fontWeight: "bold",
-    },
-    subText: {
-        color: "#fff",
-        fontSize: 14,
-        marginTop: 5,
     },
 });
