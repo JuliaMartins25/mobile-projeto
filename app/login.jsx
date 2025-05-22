@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native'; // Adicione esta linha
+
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigation = useNavigation(); // Adicione esta linha
+
 
   return (
     <View style={styles.container}>
@@ -34,7 +38,10 @@ export default function Login() {
           </TouchableOpacity>
         </View>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Home')} // Altere aqui
+        >
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
 
