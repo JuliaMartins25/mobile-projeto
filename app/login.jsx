@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function Login() {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <View style={styles.container}>
-      {/* Logo maior e mais para cima, sem fundo arredondado */}
       <Image source={require('../assets/logo.png')} style={styles.logo} />
 
       <View style={styles.form}>
@@ -13,12 +15,24 @@ export default function Login() {
           placeholder="Nome de usuário ou email"
           placeholderTextColor="#b88"
         />
-        <TextInput
-          style={styles.input}
-          placeholder="Senha"
-          placeholderTextColor="#b88"
-          secureTextEntry
-        />
+        <View style={styles.passwordContainer}>
+          <TextInput
+            style={[styles.input, { marginBottom: 0, flex: 1 }]}
+            placeholder="Senha"
+            placeholderTextColor="#b88"
+            secureTextEntry={!showPassword}
+          />
+          <TouchableOpacity
+            style={styles.eyeButton}
+            onPress={() => setShowPassword((prev) => !prev)}
+          >
+            <Ionicons
+              name={showPassword ? 'eye-off' : 'eye'}
+              size={24}
+              color="#b88"
+            />
+          </TouchableOpacity>
+        </View>
 
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Entrar</Text>
@@ -43,11 +57,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffb6c1',
     alignItems: 'center',
-    justifyContent: 'flex-start', // logo mais para cima
+    justifyContent: 'flex-start',
     padding: 20,
   },
-  // Removido o estilo title
-
   logo: {
     width: 250,
     height: 200,
@@ -55,7 +67,6 @@ const styles = StyleSheet.create({
     marginBottom: 26,
     resizeMode: 'contain',
   },
-
   form: {
     width: '100%',
     alignItems: 'center',
@@ -71,13 +82,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     marginBottom: 14,
     fontSize: 16,
-    borderWidth: 1,
-    borderColor: '#ffe0ec',
-
-    shadowColor: '#e75480',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.05,
     shadowRadius: 4,
+  },
+  passwordContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 14,
+  },
+  eyeButton: {
+    position: 'absolute',
+    right: 14,
+    padding: 8,
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   button: {
     backgroundColor: '#ADD8E6',
