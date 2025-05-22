@@ -70,13 +70,8 @@ const styles = StyleSheet.create({
   form: {
     width: '100%',
     alignItems: 'center',
-    backgroundColor: '#fff6fa',
     borderRadius: 18,
     padding: 24,
-    shadowColor: '#e75480',
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.08,
-    shadowRadius: 16,
     elevation: 4,
   },
   input: {
@@ -87,9 +82,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     marginBottom: 14,
     fontSize: 16,
-    borderWidth: 1,
-    borderColor: '#ffe0ec',
-    shadowColor: '#e75480',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.05,
     shadowRadius: 4,
