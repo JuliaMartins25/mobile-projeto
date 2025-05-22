@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, Image, SafeAreaView, StatusBar, ScrollView } from "react-native";
 import ExploreCards from "./exploreCards";
-import Pesquisa from "./pesquisa";
 import Botao from "./components/buttons/button"
 import Carousel from "./components/carousel/carousel";
 
@@ -44,7 +43,6 @@ export default function Screen() {
                     <Carousel data={carouselData} />
 
                     <Text style={styles.title}>Explorar</Text>
-                    <Pesquisa />
                     <Botao />
                     <ExploreCards />
                 </View>
