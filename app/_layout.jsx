@@ -48,8 +48,15 @@ export default function RootLayout() {
                 }}
             />
             <Stack.Screen
+                name="register"
+                options={{
+                    headerShown: false, // Esconde o header na tela de cadastro
+                }}
+            />
+            <Stack.Screen
                 name="index"
                 options={{
+                    headerShown: false,
                     headerTitle: () => {
                         const navigation = useNavigation();
                         return (
