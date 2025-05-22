@@ -1,5 +1,7 @@
 import React from "react";
-import { FlatList, Image, Text, View, StyleSheet, TouchableOpacity, Linking } from "react-native";
+import { FlatList, Image, Text, View, StyleSheet, TouchableOpacity, Linking, TextInput} from "react-native";
+import { Ionicons } from '@expo/vector-icons';
+import { useState } from "react";
 
 const data = [
     {
@@ -41,7 +43,25 @@ const data = [
 ];
 
 const ExploreCards = () => {
+    const [searchText, setSearchText] = useState("");
+
+    // Filtra os cards conforme o texto digitado
+    const filteredData = data.filter(item =>
+        item.title.toLowerCase().includes(searchText.toLowerCase())
+    );
+
     return (
+        <View>
+            <View style={styles.Container}>
+                <Ionicons name="search" size={20} color="#C4C4C4" style={styles.icon} />
+                <TextInput
+                    style={styles.pesquisa}
+                    placeholder="Pesquisar produtos..."
+                    value={searchText}
+                    onChangeText={setSearchText}
+                />
+            </View>
+        
         <FlatList
             data={data}
             keyExtractor={(item) => item.id}
@@ -59,10 +79,31 @@ const ExploreCards = () => {
             contentContainerStyle={styles.listContent}
             scrollEnabled={false}
         />
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
+    Container: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: 'white',
+        borderRadius: 25,
+        height: 45,
+        width: '75%',
+        paddingHorizontal: 15,
+        marginVertical: 20,
+        alignSelf: 'center',
+    },
+    icon: {
+        marginRight: 10,
+    },
+    pesquisa: {
+        flex: 1,
+        height: 40,
+        fontSize: 16,
+        color: '#C4C4C4',
+    },
     listContent: {
         paddingBottom: 20,
     },
