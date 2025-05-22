@@ -28,18 +28,27 @@ export default function RootLayout() {
     };
 
     return (
-        <Stack screenOptions={{
-            headerShown: true,
-            title: "Perfil",
-            headerStyle: {
-                backgroundColor: '#A2D2FF',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-                fontWeight: 'bold',
-            }
-        }}>
-            <Stack.Screen name="index"
+        <Stack
+            screenOptions={{
+                headerShown: true,
+                title: "Perfil",
+                headerStyle: {
+                    backgroundColor: '#A2D2FF',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                }
+            }}
+        >
+            <Stack.Screen
+                name="login"
+                options={{
+                    headerShown: false, // Esconde o header na tela de login
+                }}
+            />
+            <Stack.Screen
+                name="index"
                 options={{
                     headerTitle: () => {
                         const navigation = useNavigation();
