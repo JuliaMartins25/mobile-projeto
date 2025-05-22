@@ -1,6 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, Alert, TextInput } from "react-native";
-
+import { View, Text, StyleSheet, Image, TouchableOpacity, Alert, TextInput } from "react-native";
 
 export default function EditProfile() {
     const changePhoto = () => {
@@ -11,105 +10,125 @@ export default function EditProfile() {
             { text: "Cancelar", style: "cancel" },
         ]);
     };
-    
 
-        const button = () => {
-            console.log("Alterações salvas!");
-            Alert.alert("Sucesso", "Suas alterações foram salvas!");
-        };
-        
+    const button = () => {
+        console.log("Alterações salvas!");
+        Alert.alert("Sucesso", "Suas alterações foram salvas!");
+    };
+
     return (
         <View style={styles.container}>
-
-            <TouchableOpacity onPress={changePhoto} style={styles.avatarContainer}>
+            <View style={styles.avatarContainer}>
                 <Image
                     source={{ uri: "https://i.ibb.co/Kzmhb4YV/download.png" }}
                     style={styles.image}
                 />
-                <Text style={styles.username}>Trocar foto de perfil</Text>
-            </TouchableOpacity>
-
-
-            <View style={styles.options}>
-                <Text style={styles.optionText}>Nome</Text>
-                <TextInput style={styles.input} placeholder="Digite seu nome" />
+                <TouchableOpacity onPress={changePhoto}>
+                    <Text style={styles.changePhotoText}>Trocar foto de perfil</Text>
+                </TouchableOpacity>
             </View>
-            <View style={styles.options}>
-                <Text style={styles.optionText}>Nome de usuário</Text>
-                <TextInput style={styles.input} placeholder="@novousuario123" />
-            </View>
-            <View style={styles.options}>
-                <Text style={styles.optionText}>Bio</Text>
-                <TextInput style={styles.input} placeholder="Nova Biografia" />
+
+            <View style={styles.form}>
+                <Text style={styles.label}>Nome</Text>
+                <TextInput style={styles.input} placeholder="Digite seu nome" placeholderTextColor="#888" />
+
+                <Text style={styles.label}>Nome de usuário</Text>
+                <TextInput style={styles.input} placeholder="@novousuario123" placeholderTextColor="#888" />
+
+                <Text style={styles.label}>Bio</Text>
+                <TextInput style={styles.input} placeholder="Nova Biografia" placeholderTextColor="#888" />
             </View>
 
             <TouchableOpacity style={styles.saveButton} onPress={button}>
                 <Text style={styles.saveButtonText}>Salvar alterações</Text>
             </TouchableOpacity>
-
         </View>
     );
 }
 
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 40,
-        paddingBottom: 80,
-        paddingHorizontal: 20,
         backgroundColor: "#A2D2FF",
         alignItems: "center",
-        paddingTop: 50,
+        paddingTop: 40,
+        paddingHorizontal: 20,
     },
     avatarContainer: {
         alignItems: "center",
-        marginBottom: 20,
+        marginBottom: 24,
     },
     image: {
-        width: 100,
-        height: 100,
-        borderRadius: 50,
-        borderWidth: 2,
-        borderColor: "#F96380",
+        width: 130,
+        height: 130,
+        borderRadius: 65,
+        borderWidth: 3,
+        borderColor: "#fff",
+        backgroundColor: "#fff",
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.15,
+        shadowRadius: 8,
+        elevation: 6,
     },
-    username: {
-        fontSize: 22,
-        fontWeight: "bold",
-        textAlign: "center",
-        marginTop: 10,
+    changePhotoText: {
+        fontSize: 16,
         color: "#F96380",
+        marginTop: 12,
+        textDecorationLine: "underline",
+        fontWeight: "bold",
+        letterSpacing: 0.5,
     },
-    options: {
-        marginBottom: 20,
-        borderRadius: 10,
+    form: {
         width: "100%",
-        backgroundColor: "white",
+        backgroundColor: "#fff",
+        borderRadius: 18,
+        padding: 22,
+        marginBottom: 30,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.07,
+        shadowRadius: 8,
+        elevation: 2,
+    },
+    label: {
+        color: "#F96380",
+        fontSize: 15,
+        fontWeight: "bold",
+        marginBottom: 6,
+        marginTop: 10,
+        letterSpacing: 0.5,
     },
     input: {
-        borderBottomWidth: 1,
-        borderBottomColor: "#ccc",
-        paddingVertical: 6,
+        backgroundColor: "#f8f8fa",
+        borderRadius: 10,
+        paddingHorizontal: 14,
+        paddingVertical: 10,
         fontSize: 16,
-        color: "#C4C4C4"
-    },
-    optionText: {
-        color: "#F96380",
-        borderBottomWidth: 1,
-        borderBottomColor: "#F96380",
-        paddingVertical: 6,
-        fontSize: 16,
+        marginBottom: 10,
+        color: "#333",
+        borderWidth: 0,
+        shadowColor: "#F96380",
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.04,
+        shadowRadius: 2,
     },
     saveButton: {
         backgroundColor: "#F96380",
-        paddingVertical: 12,
-        paddingHorizontal: 30,
+        paddingVertical: 14,
+        paddingHorizontal: 50,
         borderRadius: 25,
-        marginTop: 20,
+        alignSelf: "center",
+        shadowColor: "#F96380",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.15,
+        shadowRadius: 6,
+        elevation: 2,
     },
     saveButtonText: {
         color: "#fff",
         fontSize: 18,
         fontWeight: "bold",
+        letterSpacing: 1,
     },
 });
