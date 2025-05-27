@@ -19,7 +19,7 @@ export default function Botao() {
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.card}>
-                <Link href="" asChild>
+                <Link href="https://pt.quizur.com/quiz/qual-e-a-curvatura-do-seu-cabelo-descubra-agora-1prPN" asChild>
                     <Text style={styles.text}>Curvatura</Text>
                 </Link>
             </TouchableOpacity>
@@ -30,9 +30,8 @@ export default function Botao() {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
-        paddingHorizontal: 15,
     },
     card: {
         backgroundColor: '#FFAFCC', // Rosa claro

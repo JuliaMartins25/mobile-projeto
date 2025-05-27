@@ -25,7 +25,7 @@ const Carousel = ({ data }) => {
         <Image
           source={{ uri: item.image }}
           style={styles.cardImage}
-          resizeMode="contain"
+          resizeMode="cover"
         />
         <View style={styles.cardContent}>
           <Text style={styles.cardTitle} numberOfLines={2}>
@@ -36,8 +36,7 @@ const Carousel = ({ data }) => {
           </Text>
           <View style={styles.cardFooter}>
             <Text style={styles.cardDate}>{item.date}</Text>
-            <TouchableOpacity style={styles.readMoreButton}>
-            </TouchableOpacity>
+            <TouchableOpacity style={styles.readMoreButton}></TouchableOpacity>
           </View>
         </View>
       </View>
@@ -153,30 +152,29 @@ const styles = StyleSheet.create({
   },
   card: {
     width: CARD_WIDTH,
-    height: 300,
     marginHorizontal: SPACING / 2,
     borderRadius: 15,
     backgroundColor: "#FFAFCC",
     shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
     overflow: "hidden",
   },
   cardImage: {
-    width: "100%",
+    width: 150,
     height: 150,
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
-    borderBottomLeftRadius: 40,
-    borderBottomRightRadius: 40,
-    alignSelf: 'center',
-    marginTop: 10,
-
+    borderRadius: 70,
+    borderWidth: 4,
+    borderColor: "white",
+    alignSelf: "center",
+    marginTop: 15,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    elevation: 5,
   },
   cardContent: {
     padding: 15,
