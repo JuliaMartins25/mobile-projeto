@@ -44,7 +44,7 @@ export default function Screen() {
 
                     <Text style={styles.title}>Explorar</Text>
                     <Botao />
-                    <ExploreCards />
+                    <ExploreCards/>
                 </View>
 
             </ScrollView>

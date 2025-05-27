@@ -18,37 +18,37 @@ const data = [
     id: "1",
     title: " Descubra o seu tipo de cabelo",
     image: require("../assets/img1.png"),
-    link: "",
+    link: "/content/card1",
   },
   {
     id: "2",
     title: "Tipos de cabelo masculino: tem diferença? Entenda!",
     image: require("../assets/img2.png"),
-    link: "https://www.usebob.com.br/blogs/news/tipos-de-cabelo-masculino-tem-diferenca-entenda?srsltid=AfmBOopflcNZxwxBFH_NhpFg4lfoJlzW2HZTvU5X1ReQOvjBEXsznTKH",
+    link: "/content/card2",
   },
   {
     id: "3",
     title: "Tipos de cacho: descubra o seu!",
     image: require("../assets/img3.png"),
-    link: "https://claudia.abril.com.br/cabelos/tipo-de-cacho-teste-2a-2b-2c-3a-3b-3c-4a-4b-4c/#google_vignette",
+    link: "/content/card3",
   },
   {
     id: "4",
     title: "Qual o corte de cabelo da moda que mais combina com você?",
     image: require("../assets/img4.png"),
-    link: "../app/content/card4.jsx",
+    link: "/content/card4",
   },
   {
     id: "5",
     title: "Produtos capilares que você precisa testar!",
     image: require("../assets/img5.png"),
-    link: "https://example.com/produtos",
+    link: "/content/card5",
   },
   {
     id: "6",
     title: "5 receitas caseiras que te ajudarão a ter um cabelo saudável",
     image: require("../assets/img6.png"),
-    link: "https://example.com/receitas",
+    link: "/content/card6",
   },
 ];
 
@@ -98,18 +98,23 @@ const ExploreCards = () => {
         numColumns={2}
         columnWrapperStyle={filteredData.length > 1 ? styles.row : null} // Evita erro quando há apenas 1 item
         renderItem={({ item }) => (
-          <TouchableOpacity
-            style={styles.card}
-            onPress={() => handlePress(item.link)}
-          >
-            <Image
-              source={item.image}
-              style={styles.imageCard}
-              resizeMode="cover"
-            />
-            <Text style={styles.cardText}>{item.title}</Text>
-            
-          </TouchableOpacity>
+          <View style={styles.card}>
+            <TouchableOpacity
+              style={{ flex: 1 }}
+              onPress={() => handlePress(item.link)}
+            >
+              <Image
+                source={item.image}
+                style={styles.imageCard}
+                resizeMode="cover"
+              />
+              <Text style={styles.cardText}>{item.title}</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+            <Link href={item.link} style={styles.saibaMaisText}>Saiba mais</Link>
+            </TouchableOpacity>
+          </View>
         )}
         contentContainerStyle={styles.listContent}
         scrollEnabled={false}
@@ -137,7 +142,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     fontSize: 16,
-    color: "#333", // Mudei para cor mais escura para melhor legibilidade
+    color: "#333",
   },
   noResultsContainer: {
     alignItems: "center",
@@ -180,6 +185,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#333",
   },
+  saibaMaisText: {
+    color: '#007bff', // Azul padrão de link
+    textAlign: 'center',
+    marginBottom: 8,
+    textDecorationLine: 'underline',
+    fontSize: 12,
+  }
 });
 
 export default ExploreCards;
