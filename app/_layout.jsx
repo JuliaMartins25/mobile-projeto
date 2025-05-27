@@ -44,13 +44,13 @@ export default function RootLayout() {
             <Stack.Screen
                 name="login"
                 options={{
-                    headerShown: true, // Esconde o header na tela de login
+                    headerShown: false,
                 }}
             />
             <Stack.Screen
                 name="register"
                 options={{
-                    headerShown: true, // Esconde o header na tela de cadastro
+                    headerShown: false,
                 }}
             />
             <Stack.Screen
