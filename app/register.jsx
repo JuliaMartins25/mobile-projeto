@@ -2,23 +2,43 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { Link } from 'expo-router';
 
-export default function Login() {
+export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
-
-  // Adicione o hook useNavigation do React Navigation
-
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
       <Image source={require('../assets/logo.png')} style={styles.logo} />
 
+      <TouchableOpacity
+        style={styles.loginButton}
+        onPress={() => navigation.navigate('login')}
+      >
+        <Ionicons name="log-in-outline" size={20} color="#cc3366" style={{ marginRight: 8 }} />
+        <Text style={styles.loginButtonText}>Faça Login</Text>
+      </TouchableOpacity>
+
+      <View style={styles.separatorContainer}>
+        <View style={styles.separatorLine} />
+        <Text style={styles.separatorText}>OU</Text>
+        <View style={styles.separatorLine} />
+      </View>
+
       <View style={styles.form}>
         <TextInput
           style={styles.input}
-          placeholder="Nome de usuário ou email"
+          placeholder="Número de celular ou email"
+          placeholderTextColor="#b88"
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Nome completo"
+          placeholderTextColor="#b88"
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Nome de usuário"
           placeholderTextColor="#b88"
         />
         <View style={styles.passwordContainer}>
@@ -41,25 +61,8 @@ export default function Login() {
         </View>
 
         <TouchableOpacity style={styles.button}>
-          <Link href="/" style={styles.buttonText}>
-            Entrar
-          </Link>
+          <Text style={styles.buttonText}>Cadastre-se</Text>
         </TouchableOpacity>
-
-
-        <TouchableOpacity>
-          <Text style={styles.forgot}>Esqueceu a senha?</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.signup}
-          onPress={() => navigation.navigate('register')}
-        >
-          <Text style={styles.signupText}>
-            Não tem uma conta? <Text style={styles.signupLink}>Cadastre-se</Text>
-          </Text>
-        </TouchableOpacity>
-
       </View>
     </View>
   );
@@ -79,6 +82,48 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 26,
     resizeMode: 'contain',
+  },
+  loginButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    marginBottom: 18,
+    elevation: 3,
+    borderWidth: 1.5,
+    borderColor: '#cc3366',
+    shadowColor: '#cc3366',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.12,
+    shadowRadius: 4,
+  },
+  loginButtonText: {
+    color: '#cc3366',
+    fontWeight: 'bold',
+    fontSize: 16,
+    letterSpacing: 1,
+  },
+  separatorContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 18,
+    width: '100%',
+    justifyContent: 'center',
+  },
+  separatorLine: {
+    flex: 1,
+    height: 1,
+    backgroundColor: '#b88',
+    marginHorizontal: 8,
+    opacity: 0.5,
+  },
+  separatorText: {
+    color: '#b88',
+    fontWeight: 'bold',
+    fontSize: 14,
+    opacity: 0.7,
   },
   form: {
     width: '100%',
@@ -132,31 +177,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 17,
     letterSpacing: 1,
-  },
-  forgot: {
-    color: '#cc3366',
-    fontSize: 14,
-    marginBottom: 18,
-    textAlign: 'center',
-    textDecorationLine: 'underline',
-    opacity: 0.8,
-  },
-  signup: {
-    backgroundColor: '#ADD8E6',
-    width: '100%',
-    height: 44,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 4,
-  },
-  signupText: {
-    color: '#fff',
-    fontSize: 15,
-  },
-  signupLink: {
-    color: '#cc3366',
-    fontWeight: 'bold',
-    textDecorationLine: 'underline',
   },
 });
