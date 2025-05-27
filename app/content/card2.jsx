@@ -1,23 +1,75 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
-const Card1 = () => {
+const Card2 = () => {
     return (
         <View style={styles.container}>
-            <View style={styles.card}>
-                <Image
-                    source={{ uri: 'https://via.placeholder.com/150' }}
-                    style={styles.image}
-                />
-                <Text style={styles.title}>Tipos de cabelo masculino: tem diferença? Entenda!</Text>
+            <ScrollView contentContainerStyle={styles.card} showsVerticalScrollIndicator={false}>
+                <Text style={styles.title}>CABELO POROSO</Text>
+
+                <Text style={styles.sectionTitle}>O que é cabelo poroso?</Text>
                 <Text style={styles.description}>
-                    Os cabelos masculinos também apresentam diferentes tipos: lisos, ondulados, cacheados e crespos. 
-                    Cada tipo possui características próprias e exige cuidados específicos para manter a saúde e o visual dos fios.
+                    Fios com cutículas abertas, que não retêm nutrientes e hidratação.
+                    {"\n\n"}
+                    Resultado de excesso de química, calor (secador/chapinha) e exposição solar.
+                    {"\n\n"}
+                    Apresenta-se como cabelo áspero, sem brilho, frágil e com frizz.
                 </Text>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Saiba Mais</Text>
-                </TouchableOpacity>
-            </View>
+
+                <Text style={styles.sectionTitle}>Grau de porosidade</Text>
+                <Text style={styles.description}>
+                    <Text style={styles.bold}>Baixa porosidade:</Text> cutículas muito fechadas, difícil absorção de produtos.{"\n\n"}
+                    <Text style={styles.bold}>Média porosidade:</Text> absorve nutrientes, mas perde com facilidade.{"\n\n"}
+                    <Text style={styles.bold}>Alta porosidade:</Text> cutículas muito abertas, absorve mas não retém.
+                </Text>
+
+                <Text style={styles.sectionTitle}>Causas da porosidade</Text>
+                <Text style={styles.description}>
+                    Alisamentos, descoloração e tinturas frequentes.{"\n\n"}
+                    Uso constante de calor sem proteção.{"\n\n"}
+                    Falta de cuidados diários.
+                </Text>
+
+                <Text style={styles.sectionTitle}>Como identificar cabelo poroso?</Text>
+                <Text style={styles.description}>
+                    Textura áspera, frizz e pontas duplas.{"\n\n"}
+                    Fios quebradiços e elásticos.{"\n\n"}
+                    Teste do toque: sensação de “areia” nos fios ao passar os dedos.
+                </Text>
+
+                <Text style={styles.sectionTitle}>Diferença entre cabelo poroso, ressecado e danificado</Text>
+                <Text style={styles.description}>
+                    <Text style={styles.bold}>Poroso:</Text> não retém tratamento, cutículas permanentemente abertas.{"\n\n"}
+                    <Text style={styles.bold}>Ressecado:</Text> fios secos no comprimento, mas sem danos estruturais.{"\n\n"}
+                    <Text style={styles.bold}>Danificado:</Text> estrutura interna comprometida por química excessiva.
+                </Text>
+
+                <Text style={styles.sectionTitle}>Como tratar cabelo poroso?</Text>
+                <Text style={styles.description}>
+                    <Text style={styles.bold}>Baixa porosidade:</Text> foco em hidratação profunda.{"\n\n"}
+                    <Text style={styles.bold}>Média porosidade:</Text> foco em nutrição intensa.{"\n\n"}
+                    <Text style={styles.bold}>Alta porosidade:</Text> foco em reconstrução + acidificação.
+                </Text>
+
+                <Text style={styles.sectionTitle}>Quanto tempo leva para recuperar?</Text>
+                <Text style={styles.description}>
+                    Varia de 30 a 90 dias, com cronograma capilar consistente e adaptado.
+                </Text>
+
+                <Text style={styles.sectionTitle}>Como evitar a porosidade?</Text>
+                <Text style={styles.description}>
+                    Usar protetor térmico e produtos com filtro solar.{"\n\n"}
+                    Evitar excesso de química e calor.{"\n\n"}
+                    Manter um cronograma capilar preventivo.
+                </Text>
+
+                <Text style={styles.sectionTitle}>Cronograma capilar ideal para cabelo poroso</Text>
+                <Text style={styles.description}>
+                    <Text style={styles.bold}>Hidratação:</Text> repõe água e ajuda a selar cutículas.{"\n\n"}
+                    <Text style={styles.bold}>Nutrição:</Text> repõe lipídios, evita frizz e melhora brilho.{"\n\n"}
+                    <Text style={styles.bold}>Reconstrução:</Text> repõe massa capilar e fortalece a fibra.
+                </Text>
+            </ScrollView>
         </View>
     );
 };
@@ -25,50 +77,48 @@ const Card1 = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#A2D2FF',
+        padding: 0,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#f5f5f5',
     },
     card: {
-        width: 300,
         backgroundColor: '#fff',
-        borderRadius: 10,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 4,
-        elevation: 5,
-        padding: 20,
-        alignItems: 'center',
-    },
-    image: {
-        width: 150,
-        height: 150,
-        borderRadius: 75,
-        marginBottom: 15,
+        borderRadius: 22,
+        shadowColor: '#A2D2FF',
+        shadowOffset: { width: 0, height: 6 },
+        shadowOpacity: 0.15,
+        shadowRadius: 16,
+        elevation: 8,
+        padding: 28,
+        margin: 24,
+        width: 340,
     },
     title: {
-        fontSize: 20,
+        fontSize: 22,
         fontWeight: 'bold',
-        marginBottom: 10,
+        marginBottom: 16,
+        color: '#A2D2FF',
+        textAlign: 'center',
+    },
+    sectionTitle: {
+        fontSize: 17,
+        fontWeight: 'bold',
+        color: '#F96380',
+        marginTop: 18,
+        marginBottom: 6,
     },
     description: {
-        fontSize: 14,
-        color: '#666',
-        textAlign: 'center',
-        marginBottom: 20,
+        fontSize: 15,
+        color: '#4A4A4A',
+        textAlign: 'left',
+        marginBottom: 6,
+        lineHeight: 22,
     },
-    button: {
-        backgroundColor: '#007BFF',
-        paddingVertical: 10,
-        paddingHorizontal: 20,
-        borderRadius: 5,
-    },
-    buttonText: {
-        color: '#fff',
-        fontSize: 16,
+    bold: {
         fontWeight: 'bold',
+        color: '#F96380',
     },
 });
 
-export default Card1;
+export default Card2;
