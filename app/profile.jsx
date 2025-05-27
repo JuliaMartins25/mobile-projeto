@@ -10,15 +10,7 @@ export default function Profile() {
 
     return (
         <ScrollView style={styles.container}>
-            {/* Cabeçalho com o botão do menu hambúrguer */}
-            <View style={styles.header}>
-                <TouchableOpacity
-                    style={styles.iconButton}
-                    onPress={() => setMenuVisible(true)} // Abre o menu
-                >
-                    <Ionicons name="menu" size={28} color="#333" />
-                </TouchableOpacity>
-            </View>
+          
 
             {/* Centralizar a imagem de perfil */}
             <View style={styles.profileContainer}>
