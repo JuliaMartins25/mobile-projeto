@@ -11,20 +11,6 @@ export default function Register() {
     <View style={styles.container}>
       <Image source={require('../assets/logo.png')} style={styles.logo} />
 
-      <TouchableOpacity
-        style={styles.loginButton}
-        onPress={() => navigation.navigate('login')}
-      >
-        <Ionicons name="log-in-outline" size={20} color="#cc3366" style={{ marginRight: 8 }} />
-        <Text style={styles.loginButtonText}>Faça Login</Text>
-      </TouchableOpacity>
-
-      <View style={styles.separatorContainer}>
-        <View style={styles.separatorLine} />
-        <Text style={styles.separatorText}>OU</Text>
-        <View style={styles.separatorLine} />
-      </View>
-
       <View style={styles.form}>
         <TextInput
           style={styles.input}
@@ -64,6 +50,24 @@ export default function Register() {
           <Text style={styles.buttonText}>Cadastre-se</Text>
         </TouchableOpacity>
       </View>
+
+      <View style={styles.separatorContainer}>
+        <View style={styles.separatorLine} />
+        <Text style={styles.separatorText}>OU</Text>
+        <View style={styles.separatorLine} />
+      </View>
+
+      <Text style={{ color: '#b88', fontSize: 15, marginBottom: 8, textAlign: 'center' }}>
+        Já possui uma conta?
+      </Text>
+      
+      <TouchableOpacity
+        style={styles.loginButton}
+        onPress={() => navigation.navigate('login')}
+      >
+        <Ionicons name="log-in-outline" size={20} color="#cc3366" style={{ marginRight: 8 }} />
+        <Text style={styles.loginButtonText}>Faça Login</Text>
+      </TouchableOpacity>
     </View>
   );
 }
