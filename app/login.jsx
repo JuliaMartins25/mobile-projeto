@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { Link } from 'expo-router';
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -40,8 +41,11 @@ export default function Login() {
         </View>
 
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Entrar</Text>
+          <Link href="/" style={styles.buttonText}>
+            Entrar
+          </Link>
         </TouchableOpacity>
+
 
         <TouchableOpacity>
           <Text style={styles.forgot}>Esqueceu a senha?</Text>
@@ -55,7 +59,7 @@ export default function Login() {
             Não tem uma conta? <Text style={styles.signupLink}>Cadastre-se</Text>
           </Text>
         </TouchableOpacity>
-        
+
       </View>
     </View>
   );

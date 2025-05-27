@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
+import { Link } from "expo-router";
 
 const data = [
   {
@@ -107,6 +108,7 @@ const ExploreCards = () => {
               resizeMode="cover"
             />
             <Text style={styles.cardText}>{item.title}</Text>
+            
           </TouchableOpacity>
         )}
         contentContainerStyle={styles.listContent}

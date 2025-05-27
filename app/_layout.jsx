@@ -15,7 +15,7 @@ export default function RootLayout() {
                 toValue: -Dimensions.get("window").width,
                 duration: 300,
                 useNativeDriver: true,
-            }).start(() => setMenuOpen(false));
+            }).start(() => setMenuOpen(false)); // Atualiza o estado após a animação
         } else {
             // Abrir menu
             setMenuOpen(true);
@@ -44,19 +44,19 @@ export default function RootLayout() {
             <Stack.Screen
                 name="login"
                 options={{
-                    headerShown: false, // Esconde o header na tela de login
+                    headerShown: true, // Esconde o header na tela de login
                 }}
             />
             <Stack.Screen
                 name="register"
                 options={{
-                    headerShown: false, // Esconde o header na tela de cadastro
+                    headerShown: true, // Esconde o header na tela de cadastro
                 }}
             />
             <Stack.Screen
                 name="index"
                 options={{
-                    headerShown: false,
+                    headerShown: true,
                     headerTitle: () => {
                         const navigation = useNavigation();
                         return (
