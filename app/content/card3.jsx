@@ -5,7 +5,7 @@ const Card3 = () => {
     return (
         <View style={styles.container}>
             <ScrollView contentContainerStyle={styles.card} showsVerticalScrollIndicator={false}>
-                <Text style={styles.title}>CABELOS MASCULINOS</Text>
+                <Text style={styles.title}>Cabelos Masculinos</Text>
 
                 <Text style={styles.sectionTitle}>Tipos de Cabelo Masculino: Tem Diferença?</Text>
                 <Text style={styles.description}>
