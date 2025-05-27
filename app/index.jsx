@@ -7,24 +7,24 @@ export default function Screen() {
     const carouselData = [
         {
             id: 1,
-            title: "Veja o antes e o depois de um cabelo ralo",
-            description: "Descubra como transformar cabelos danificados em fios longos, saudáveis e cheios de vida com as melhores práticas de cuidados capilares.",
+            title: "Quer ter um antes e depois assim?",
+            description: "Com nosso app, você consegue alcançar resultados em apenas 1 mês!",
             image: "https://i.pinimg.com/736x/97/db/a2/97dba2e0cb08cffe01b06f29fa80dae7.jpg",
             date: "Última atualização: 25 abril 2025",
         },
         {
             id: 2,
-            title: "Alcance esse cabelo dos sonhos em pouco tempo!",
-            description: "Descubra os segredos para um cabelo liso impecável, brilhoso e super saudável! Aprenda as melhores técnicas, produtos e cuidados para manter seus fios alinhados, sedosos e livres de danos.",
-            image: "https://i.pinimg.com/736x/a4/48/ba/a448ba4d131fcf4a846b1de0f641fa8f.jpg",
+            title: "Dicas de cuidados para homens!",
+            description: "Por aqui, você vera dicas para manter seu cabelo saudável e estiloso!",
+            image: "https://i.pinimg.com/736x/e5/0d/92/e50d92d67a1620bd929a538c424a6813.jpg",
             date: "Última atualização: 01 abril 2025",
         },
 
         {
             id: 3,
-            title: "Não sabe como finalizar seu cabelo?",
-            description: "Se você tem dificuldade em finalizar seu cabelo e nunca encontra a técnica ideal, aqui você vai descobrir as melhores dicas para definir, modelar e cuidar dos seus fios. Aprenda quais métodos funcionam para cada tipo de curvatura e conquiste um cabelo incrível todos os dias!",
-            image: "https://i.pinimg.com/736x/17/d8/5d/17d85d8110755256015843e5caee2533.jpg",
+            title: "Quer descobrir seu tipo de cabelo e curvatura?",
+            description: "Descubra seu tipo de cabelo e curvatura fazendo nossos quizzes!!",
+            image: "https://i.pinimg.com/736x/5a/f4/21/5af421b6323c9c537298cc8c7ad25f67.jpg",
             date: "Última atualização: 03 junho 2025",
         }
     ]
@@ -42,9 +42,10 @@ export default function Screen() {
 
                     <Carousel data={carouselData} />
 
-                    <Text style={styles.title}>Explorar</Text>
+                    <Text style={styles.title}>Quizzes</Text>
                     <Botao />
-                    <ExploreCards/>
+                    <Text style={styles.title}>Explorar</Text>
+                    <ExploreCards />
                 </View>
 
             </ScrollView>

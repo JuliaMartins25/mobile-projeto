@@ -10,7 +10,7 @@ export default function Profile() {
 
     return (
         <ScrollView style={styles.container}>
-         
+
             <View style={styles.header}>
             
             </View>
@@ -24,7 +24,6 @@ export default function Profile() {
             </View>
 
             <Text style={styles.username}>Usuário123</Text>
-            <Text style={styles.bio}>aqui neste app estou começando a cuidar do meu cabelo</Text>
             <TouchableOpacity
                 style={styles.editButton}
                 onPress={() => navigation.navigate("editProfile")} 
@@ -38,7 +37,7 @@ export default function Profile() {
                         Galeria
                     </Text>
                 </TouchableOpacity>
-               
+
             </View>
 
             {activeTab === "galeria" ? (
@@ -119,12 +118,6 @@ const styles = StyleSheet.create({
     username: {
         fontSize: 22,
         fontWeight: "bold",
-        textAlign: "center",
-        marginTop: 10,
-        color: "#333",
-    },
-    bio: {
-        fontSize: 10,
         textAlign: "center",
         marginTop: 10,
         color: "#333",
