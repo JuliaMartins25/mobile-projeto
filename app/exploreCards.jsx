@@ -16,7 +16,7 @@ import { Link } from "expo-router";
 const data = [
   {
     id: "1",
-    title: "Quiz: Descubra o seu tipo de cabelo",
+    title: " Descubra o seu tipo de cabelo",
     image: require("../assets/img1.png"),
     link: "",
   },

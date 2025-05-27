@@ -9,10 +9,11 @@ const Card1 = () => {
                     source={{ uri: 'https://via.placeholder.com/150' }}
                     style={styles.image}
                 />
-                <Text style={styles.title}>Descubra o seu tipo de cabelo</Text>
+                <Text style={styles.title}>Produtos capilares que você precisa testar!</Text>
                 <Text style={styles.description}>
-                Conhecer o seu tipo de cabelo é essencial para escolher os melhores produtos e cuidados. Os cabelos podem ser lisos, ondulados, cacheados ou crespos, e cada tipo possui características e necessidades específicas.
-
+                   Conheça os produtos essenciais para manter seus cabelos saudáveis e bonitos: shampoos sem sulfato, máscaras de hidratação, óleos nutritivos, leave-in e finalizadores. 
+                    Cada produto tem uma função específica e pode transformar a saúde dos seus fios. 
+                    Teste diferentes opções e descubra quais se adaptam melhor ao seu tipo de cabelo!
                 </Text>
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText}>Saiba Mais</Text>

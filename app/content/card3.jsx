@@ -9,10 +9,10 @@ const Card1 = () => {
                     source={{ uri: 'https://via.placeholder.com/150' }}
                     style={styles.image}
                 />
-                <Text style={styles.title}>Descubra o seu tipo de cabelo</Text>
+                <Text style={styles.title}>Tipos de cacho: descubra o seu!</Text>
                 <Text style={styles.description}>
-                Conhecer o seu tipo de cabelo é essencial para escolher os melhores produtos e cuidados. Os cabelos podem ser lisos, ondulados, cacheados ou crespos, e cada tipo possui características e necessidades específicas.
-
+                     Os cachos são classificados em diferentes tipos, do 2A ao 4C, variando de ondas suaves a cachos bem fechados. 
+                    Cada tipo de cacho possui características únicas e exige cuidados específicos para manter a definição, hidratação e saúde dos fios.
                 </Text>
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText}>Saiba Mais</Text>
