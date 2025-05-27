@@ -9,10 +9,10 @@ const Card1 = () => {
                     source={{ uri: 'https://via.placeholder.com/150' }}
                     style={styles.image}
                 />
-                <Text style={styles.title}>Descubra o seu tipo de cabelo</Text>
+                <Text style={styles.title}>5 receitas caseiras que te ajudarão a ter um cabelo saudável</Text>
                 <Text style={styles.description}>
-                Conhecer o seu tipo de cabelo é essencial para escolher os melhores produtos e cuidados. Os cabelos podem ser lisos, ondulados, cacheados ou crespos, e cada tipo possui características e necessidades específicas.
-
+                   Hidratar e nutrir os fios em casa é possível! Experimente receitas simples como máscara de abacate, umectação com óleo de coco, hidratação com babosa, esfoliação do couro cabeludo com açúcar e tônico de alecrim. 
+                    Essas receitas naturais ajudam a fortalecer, dar brilho e estimular o crescimento saudável dos cabelos.
                 </Text>
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText}>Saiba Mais</Text>

@@ -9,10 +9,10 @@ const Card1 = () => {
                     source={{ uri: 'https://via.placeholder.com/150' }}
                     style={styles.image}
                 />
-                <Text style={styles.title}>Descubra o seu tipo de cabelo</Text>
+                <Text style={styles.title}>Tipos de cabelo masculino: tem diferença? Entenda!</Text>
                 <Text style={styles.description}>
-                Conhecer o seu tipo de cabelo é essencial para escolher os melhores produtos e cuidados. Os cabelos podem ser lisos, ondulados, cacheados ou crespos, e cada tipo possui características e necessidades específicas.
-
+                    Os cabelos masculinos também apresentam diferentes tipos: lisos, ondulados, cacheados e crespos. 
+                    Cada tipo possui características próprias e exige cuidados específicos para manter a saúde e o visual dos fios.
                 </Text>
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText}>Saiba Mais</Text>
