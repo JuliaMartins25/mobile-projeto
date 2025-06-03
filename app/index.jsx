@@ -15,30 +15,30 @@ export default function Screen() {
   const carouselData = [
     {
       id: 1,
-      title: "Quer ter um antes e depois assim?",
+      title: "Encontre os melhores produtos para seu cabelo",
       description:
-        "Com nosso app, você consegue alcançar resultados em apenas 1 mês!",
+        "Explore recomendações personalizadas com base no seu tipo de fio!",
       image:
         "https://i.pinimg.com/736x/89/70/ef/8970ef978c8459be7dc48c07b7894821.jpg",
       date: "Última atualização: 25 abril 2025",
     },
     {
       id: 2,
-      title: "Dicas de cuidados para homens!",
+      title: "Acompanhe sua evolução com fotos",
       description:
-        "Por aqui, você vera dicas para manter seu cabelo saudável e estiloso!",
+        "Por aqui, você pode registrar o antes e depois e veja sua transformação capilar!",
       image:
-        "https://i.pinimg.com/736x/e5/0d/92/e50d92d67a1620bd929a538c424a6813.jpg",
+        "https://i.pinimg.com/736x/69/be/e5/69bee54c0c2a0170adc85e81c3fcde26.jpg",
       date: "Última atualização: 01 abril 2025",
     },
 
     {
       id: 3,
-      title: "Quer descobrir seu tipo de cabelo e curvatura?",
+      title: "Acesso a dicas exclusivas de cuidados",
       description:
-        "Descubra seu tipo de cabelo e curvatura fazendo nossos quizzes!!",
+        "Acesse conteúdos e dicas escritos por especialistas.",
       image:
-        "https://i.pinimg.com/736x/5a/f4/21/5af421b6323c9c537298cc8c7ad25f67.jpg",
+        "https://i.pinimg.com/736x/93/87/eb/9387eb434e13a058eafe157c2266082c.jpg",
       date: "Última atualização: 03 junho 2025",
     },
   ];
