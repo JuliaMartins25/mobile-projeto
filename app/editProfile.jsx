@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         paddingTop: 56,
         paddingBottom: 40,
         paddingHorizontal: 18,
-        backgroundColor: "#ffb6c1",
+        backgroundColor: "#ffcbdb",
         alignItems: "center",
     },
     avatarContainer: {

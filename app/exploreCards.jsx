@@ -134,6 +134,67 @@ const data = [
     image: require("../assets/cards/posol.jpg"),
     link: "/content/card6",
   },
+  {
+    id: "21",
+    title: "Massagem Capilar!",
+    image: require("../assets/cards/massagem.jpg"),
+    link: "/content/card21",
+  },
+  {
+    id: "22",
+    title: "Transição Capilar",
+    image: require("../assets/cards/massagem.jpg"),
+    link: "/content/card5",
+  },
+  {
+    id: "23",
+    title: "Hidratação Pós-Sol",
+    image: require("../assets/cards/posol.jpg"),
+    link: "/content/card6",
+  },
+  {
+    id: "24",
+    title: "Cronograma Capilar",
+    image: require("../assets/cards/cronogramas.jpg"),
+    link: "/content/card1",
+  },
+  {
+    id: "25",
+    title: "Cabelo Poroso",
+    image: require("../assets/cards/poroso.jpg"),
+    link: "/content/card2",
+  },
+  {
+    id: "26",
+    title: "Cabelos Masculinos",
+    image: require("../assets/cards/masculino.jpg"),
+    link: "/content/card3",
+  },
+  {
+    id: "27",
+    title: "Solução para Fios Ressecados!",
+    image: require("../assets/cards/ressecados.jpg"),
+    link: "/content/card4",
+  },
+  {
+    id: "28",
+    title: "Transição Capilar",
+    image: require("../assets/cards/transicao.jpg"),
+    link: "/content/card5",
+  },
+  {
+    id: "29",
+    title: "Hidratação Pós-Sol",
+    image: require("../assets/cards/posol.jpg"),
+    link: "/content/card6",
+  },
+  {
+    id: "30",
+    title: "Transição Capilar",
+    image: require("../assets/cards/transicao.jpg"),
+    link: "/content/card5",
+  },
+
 ];
 
 const ExploreCards = () => {
