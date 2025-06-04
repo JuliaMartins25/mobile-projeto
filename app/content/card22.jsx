@@ -1,35 +1,32 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
-const Card21 = () => {
+const Card22 = () => {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/736x/42/2a/fa/422afa362c1e68dcc141cf0eb200bce4.jpg' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/b9/b7/d2/b9b7d29ba2ae6d1d3e45042807b2f77d.jpg' }}
                     style={styles.image}
 
                 />
-                <Text style={styles.title}>Massagem capilar estimulante para fortalecimento e crescimento</Text>
+                <Text style={styles.title}>Uso de fronha de cetim ou seda: proteção contra frizz e quebra</Text>
                 <Text style={styles.description}>
-                    A massagem no couro cabeludo é uma técnica simples, porém altamente eficaz para estimular o crescimento dos fios e fortalecer a raiz. Ela melhora a circulação sanguínea, aumentando o aporte de oxigênio e nutrientes aos folículos pilosos.
+                O atrito constante do cabelo com tecidos ásperos, como o algodão, causa frizz, quebra e formação de nós. As fronhas de cetim ou seda são aliadas indispensáveis para quem busca preservar a saúde dos fios durante o sono.
                 </Text>
-                <Text style={styles.sectionTitle}>Como fazer:</Text>
+                <Text style={styles.sectionTitle}>Como usar:</Text>
                 <Text style={styles.description}>
-                    -Lave as mãos e, com as pontas dos dedos, realize movimentos circulares suaves por todo o couro cabeludo.{"\n"}
-                    -Dedique de 5 a 10 minutos à massagem, diariamente ou pelo menos três vezes por semana.{"\n"}
-                    -Pode ser realizada a seco, antes do banho, ou durante a lavagem com shampoo, potencializando a limpeza e relaxando a musculatura.
+                    -Troque a fronha de algodão por uma de cetim ou seda, preferencialmente de boa qualidade, com trama bem fechada.{"\n"}
+                    -Ideal para todos os tipos de cabelo, mas especialmente para cacheados, ondulados e crespos, que sofrem mais com frizz e ressecamento.{"\n"}
+                    -Para melhores resultados, combine com touca de cetim ou turbante noturno.
                 </Text>
-                <Text style={styles.sectionTitle}>✅ Dica extra:</Text>
-                <Text style={styles.description}>
-                    Potencialize a massagem com óleos essenciais, como o de alecrim ou hortelã-pimenta, diluídos em óleo vegetal. Eles ativam ainda mais a circulação e estimulam o crescimento.{"\n"}
-                </Text>
+                
                 <Text style={styles.sectionTitle}>✅ Benefícios:</Text>
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>1. Estimula o crescimento capilar.</Text>{"\n"}
-                    <Text style={styles.bold}>2. Previne e reduz a queda.</Text>{"\n"}
-                    <Text style={styles.bold}>3. Relaxa e alivia tensões, promovendo bem-estar.</Text>
-
+                    <Text style={styles.bold}>1. Reduz significativamente o frizz.</Text>{"\n"}
+                    <Text style={styles.bold}>2. Previne quebra e embaraçamento.</Text>{"\n"}
+                    <Text style={styles.bold}>3. Mantém a definição dos cachos e o penteado por mais tempo.</Text>{"\n"}
+                    <Text style={styles.bold}>4. Conserva a hidratação natural dos fios.</Text>
                 </Text>
 
             </View>
@@ -93,4 +90,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Card21;
+export default Card22;

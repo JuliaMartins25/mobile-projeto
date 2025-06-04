@@ -1,37 +1,39 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
-const Card21 = () => {
+const Card23 = () => {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/736x/42/2a/fa/422afa362c1e68dcc141cf0eb200bce4.jpg' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/ab/cf/de/abcfded76998caa83299eee8581edf60.jpg' }}
                     style={styles.image}
-
                 />
-                <Text style={styles.title}>Massagem capilar estimulante para fortalecimento e crescimento</Text>
-                <Text style={styles.description}>
-                    A massagem no couro cabeludo é uma técnica simples, porém altamente eficaz para estimular o crescimento dos fios e fortalecer a raiz. Ela melhora a circulação sanguínea, aumentando o aporte de oxigênio e nutrientes aos folículos pilosos.
+                <Text style={styles.title}>
+                    Tratamento detox capilar: renovação profunda para couro cabeludo e fios
                 </Text>
+                <Text style={styles.description}>
+                    O acúmulo de resíduos de produtos, oleosidade e poluentes prejudica a saúde capilar, podendo causar queda, dermatites e obstrução dos folículos.
+                </Text>
+
                 <Text style={styles.sectionTitle}>Como fazer:</Text>
                 <Text style={styles.description}>
-                    -Lave as mãos e, com as pontas dos dedos, realize movimentos circulares suaves por todo o couro cabeludo.{"\n"}
-                    -Dedique de 5 a 10 minutos à massagem, diariamente ou pelo menos três vezes por semana.{"\n"}
-                    -Pode ser realizada a seco, antes do banho, ou durante a lavagem com shampoo, potencializando a limpeza e relaxando a musculatura.
+                    - A cada 15 dias, use um shampoo detox ou esfoliante capilar.{"\n"}
+                    - Aplique no couro cabeludo úmido, massageando suavemente com as pontas dos dedos.{"\n"}
+                    - Enxágue bem e prossiga com hidratação, pois o detox pode deixar os fios mais "abertos".
                 </Text>
+
                 <Text style={styles.sectionTitle}>✅ Dica extra:</Text>
                 <Text style={styles.description}>
-                    Potencialize a massagem com óleos essenciais, como o de alecrim ou hortelã-pimenta, diluídos em óleo vegetal. Eles ativam ainda mais a circulação e estimulam o crescimento.{"\n"}
+                    Finalize com um condicionador ou máscara de pH baixo para selar as cutículas.
                 </Text>
+
                 <Text style={styles.sectionTitle}>✅ Benefícios:</Text>
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>1. Estimula o crescimento capilar.</Text>{"\n"}
-                    <Text style={styles.bold}>2. Previne e reduz a queda.</Text>{"\n"}
-                    <Text style={styles.bold}>3. Relaxa e alivia tensões, promovendo bem-estar.</Text>
-
+                    <Text style={styles.bold}>1. Limpeza profunda e sensação refrescante.</Text>{"\n"}
+                    <Text style={styles.bold}>2. Estímulo à circulação do couro cabeludo.</Text>{"\n"}
+                    <Text style={styles.bold}>3. Melhora na absorção de tratamentos.</Text>
                 </Text>
-
             </View>
         </ScrollView>
     );
@@ -40,25 +42,25 @@ const Card21 = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#A2D2FF', // Fundo azul claro
+        backgroundColor: '#A2D2FF',
     },
     contentContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 16, // Espaçamento interno
+        padding: 16,
     },
     card: {
         backgroundColor: '#fff',
-        borderRadius: 16, // Bordas arredondadas
-        shadowColor: '#000', // Sombra visível
+        borderRadius: 16,
+        shadowColor: '#000',
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.2,
         shadowRadius: 8,
         elevation: 6,
         padding: 20,
         margin: 16,
-        width: '90%', // Responsividade
-        maxWidth: 360, // Limite de largura
+        width: '90%',
+        maxWidth: 360,
     },
     image: {
         width: 280,
@@ -70,7 +72,7 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontWeight: 'bold',
         marginBottom: 12,
-        color: '#333', // Cor escura para contraste
+        color: '#333',
         textAlign: 'center',
     },
     sectionTitle: {
@@ -83,7 +85,7 @@ const styles = StyleSheet.create({
     description: {
         fontSize: 16,
         color: '#4A4A4A',
-        textAlign: 'justify', // Justificado para melhor leitura
+        textAlign: 'justify',
         marginBottom: 10,
         lineHeight: 24,
     },
@@ -93,4 +95,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Card21;
+export default Card23;
