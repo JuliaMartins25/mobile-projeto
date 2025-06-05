@@ -67,6 +67,8 @@ export default function RootLayout() {
           name="index"
           options={{
             headerLeft: () => null,
+            headerBackVisible: false,
+            gestureEnabled: false,
             headerTitle: () => {
               return (
                 <View
