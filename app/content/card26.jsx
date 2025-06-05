@@ -1,38 +1,33 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
-const Card23 = () => {
+const Card26 = () => {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/736x/ab/cf/de/abcfded76998caa83299eee8581edf60.jpg' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/8e/e3/4d/8ee34d92307d146aea91c21b262f7282.jpg' }}
                     style={styles.image}
                 />
                 <Text style={styles.title}>
-                    Tratamento detox capilar: renovação profunda para couro cabeludo e fios
+                    Água morna ou fria na lavagem: saúde e brilho garantidos
                 </Text>
                 <Text style={styles.description}>
-                    O acúmulo de resíduos de produtos, oleosidade e poluentes prejudica a saúde capilar, podendo causar queda, dermatites e obstrução dos folículos.
+                    A temperatura da água impacta diretamente na saúde capilar. A água quente resseca e abre excessivamente as cutículas, enquanto a fria sela e promove brilho.
                 </Text>
 
                 <Text style={styles.sectionTitle}>Como fazer:</Text>
                 <Text style={styles.description}>
-                    - A cada 15 dias, use um shampoo detox ou esfoliante capilar.{"\n"}
-                    - Aplique no couro cabeludo úmido, massageando suavemente com as pontas dos dedos.{"\n"}
-                    - Enxágue bem e prossiga com hidratação, pois o detox pode deixar os fios mais "abertos".
-                </Text>
-
-                <Text style={styles.sectionTitle}>✅ Dica extra:</Text>
-                <Text style={styles.description}>
-                    Finalize com um condicionador ou máscara de pH baixo para selar as cutículas.
+                    - Lave o cabelo com água morna, que ajuda a remover a sujeira sem agredir.{"\n"}
+                    - Finalize sempre com água fria, promovendo o selamento das cutículas.{"\n"}
+                    - Evite lavar os fios diariamente com água quente, pois isso pode causar ressecamento e aumentar a produção de oleosidade.
                 </Text>
 
                 <Text style={styles.sectionTitle}>✅ Benefícios:</Text>
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>1. Limpeza profunda e sensação refrescante.</Text>{"\n"}
-                    <Text style={styles.bold}>2. Estímulo à circulação do couro cabeludo.</Text>{"\n"}
-                    <Text style={styles.bold}>3. Melhora na absorção de tratamentos.</Text>
+                    <Text style={styles.bold}>1. Fios mais brilhantes e macios.</Text>{"\n"}
+                    <Text style={styles.bold}>2. Menos frizz e pontas duplas.</Text>{"\n"}
+                    <Text style={styles.bold}>3. Couro cabeludo mais saudável.</Text>
                 </Text>
             </View>
         </ScrollView>
@@ -95,4 +90,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Card23;
+export default Card26;

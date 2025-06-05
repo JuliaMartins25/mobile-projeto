@@ -1,38 +1,38 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
-const Card23 = () => {
+const Card27 = () => {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/736x/ab/cf/de/abcfded76998caa83299eee8581edf60.jpg' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/fc/40/82/fc40827f8de2e6bb6eba897b90f5cc79.jpg' }}
                     style={styles.image}
                 />
                 <Text style={styles.title}>
-                    Tratamento detox capilar: renovação profunda para couro cabeludo e fios
+                    Procedimentos químicos: cuidados antes, durante e depois
                 </Text>
                 <Text style={styles.description}>
-                    O acúmulo de resíduos de produtos, oleosidade e poluentes prejudica a saúde capilar, podendo causar queda, dermatites e obstrução dos folículos.
+                    Descolorações, tinturas e alisamentos alteram profundamente a estrutura capilar. O cuidado adequado previne danos severos e mantém a beleza dos fios.
                 </Text>
 
-                <Text style={styles.sectionTitle}>Como fazer:</Text>
+                <Text style={styles.sectionTitle}>Como cuidar:</Text>
                 <Text style={styles.description}>
-                    - A cada 15 dias, use um shampoo detox ou esfoliante capilar.{"\n"}
-                    - Aplique no couro cabeludo úmido, massageando suavemente com as pontas dos dedos.{"\n"}
-                    - Enxágue bem e prossiga com hidratação, pois o detox pode deixar os fios mais "abertos".
+                    - <Text style={styles.bold}>Antes:</Text> realize tratamentos reconstrutores com queratina ou colágeno, para fortalecer a fibra.{"\n"}
+                    - <Text style={styles.bold}>Durante:</Text> utilize produtos profissionais, que minimizam os danos.{"\n"}
+                    - <Text style={styles.bold}>Depois:</Text> mantenha cronograma capilar rigoroso, focando em hidratação e nutrição.
                 </Text>
 
                 <Text style={styles.sectionTitle}>✅ Dica extra:</Text>
                 <Text style={styles.description}>
-                    Finalize com um condicionador ou máscara de pH baixo para selar as cutículas.
+                    Evite realizar mais de um procedimento químico ao mesmo tempo (ex.: descoloração + alisamento).
                 </Text>
 
                 <Text style={styles.sectionTitle}>✅ Benefícios:</Text>
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>1. Limpeza profunda e sensação refrescante.</Text>{"\n"}
-                    <Text style={styles.bold}>2. Estímulo à circulação do couro cabeludo.</Text>{"\n"}
-                    <Text style={styles.bold}>3. Melhora na absorção de tratamentos.</Text>
+                    <Text style={styles.bold}>1. Fios fortes e resistentes mesmo após química.</Text>{"\n"}
+                    <Text style={styles.bold}>2. Menor risco de quebra e elasticidade excessiva.</Text>{"\n"}
+                    <Text style={styles.bold}>3. Manutenção da cor e do brilho.</Text>
                 </Text>
             </View>
         </ScrollView>
@@ -95,4 +95,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Card23;
+export default Card27;

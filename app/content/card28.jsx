@@ -1,38 +1,33 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
-const Card23 = () => {
+const Card28 = () => {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/736x/ab/cf/de/abcfded76998caa83299eee8581edf60.jpg' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/1c/9a/4c/1c9a4c9273ca6c43cae3c9611f62dd33.jpg' }}
                     style={styles.image}
                 />
                 <Text style={styles.title}>
-                    Tratamento detox capilar: renovação profunda para couro cabeludo e fios
+                    Corte regular: essencial para crescimento saudável e estética
                 </Text>
                 <Text style={styles.description}>
-                    O acúmulo de resíduos de produtos, oleosidade e poluentes prejudica a saúde capilar, podendo causar queda, dermatites e obstrução dos folículos.
+                    O mito de que cortar o cabelo impede o crescimento é equivocado. Cortar as pontas regularmente elimina partes danificadas, promovendo a saúde geral dos fios.
                 </Text>
 
                 <Text style={styles.sectionTitle}>Como fazer:</Text>
                 <Text style={styles.description}>
-                    - A cada 15 dias, use um shampoo detox ou esfoliante capilar.{"\n"}
-                    - Aplique no couro cabeludo úmido, massageando suavemente com as pontas dos dedos.{"\n"}
-                    - Enxágue bem e prossiga com hidratação, pois o detox pode deixar os fios mais "abertos".
-                </Text>
-
-                <Text style={styles.sectionTitle}>✅ Dica extra:</Text>
-                <Text style={styles.description}>
-                    Finalize com um condicionador ou máscara de pH baixo para selar as cutículas.
+                    - Realize cortes a cada 8 a 12 semanas, dependendo da saúde das pontas.{"\n"}
+                    - Para quem deseja manter o comprimento, opte pelo "corte bordado", que remove apenas as pontas duplas.{"\n"}
+                    - Para quem está em transição capilar, corte progressivamente as partes com química.
                 </Text>
 
                 <Text style={styles.sectionTitle}>✅ Benefícios:</Text>
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>1. Limpeza profunda e sensação refrescante.</Text>{"\n"}
-                    <Text style={styles.bold}>2. Estímulo à circulação do couro cabeludo.</Text>{"\n"}
-                    <Text style={styles.bold}>3. Melhora na absorção de tratamentos.</Text>
+                    <Text style={styles.bold}>1. Prevenção de pontas duplas e quebra.</Text>{"\n"}
+                    <Text style={styles.bold}>2. Cabelos mais saudáveis e bonitos.</Text>{"\n"}
+                    <Text style={styles.bold}>3. Crescimento contínuo e uniforme.</Text>
                 </Text>
             </View>
         </ScrollView>
@@ -95,4 +90,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Card23;
+export default Card28;
