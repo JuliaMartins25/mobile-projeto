@@ -126,10 +126,10 @@ const styles = StyleSheet.create({
     width: 340,
   },
   image: {
-    width: "100%",
-    height: 200,
-    borderRadius: 16,
-    marginBottom: 16,
+    width: 290,
+    height: 300,
+    borderRadius: 12,
+    marginBottom: 20,
   },
   title: {
     fontSize: 22,

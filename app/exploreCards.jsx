@@ -64,21 +64,21 @@ const data = [
   },
   {
     id: "9",
-    title: "Cabelos Masculinos",
+    title: "Técnica Plopping",
     image: require("../assets/cards/card9.jpg"),
-    link: "/content/card3",
+    link: "/content/card9",
   },
   {
     id: "10",
     title: "Hidratação com Ácido Hialurônico",
     image: require("../assets/cards/hialuronico.jpg"),
-    link: "/content/card4",
+    link: "/content/card10",
   },
   {
     id: "11",
-    title: "Transição Capilar",
-    image: require("../assets/cards/transicao.jpg"),
-    link: "/content/card5",
+    title: "Finalização com Twist Out:",
+    image: require("../assets/cards/tostout.jpg"),
+    link: "/content/card11",
   },
   {
     id: "12",
