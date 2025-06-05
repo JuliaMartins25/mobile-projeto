@@ -59,7 +59,7 @@ const data = [
   {
     id: "8",
     title: "Reverse Washing",
-   // image: require("../assets/cards/poroso.jpg"),
+    image: require("../assets/cards/lavagemcontraria.jpg"),
     link: "/content/card8",
   },
   {
@@ -178,21 +178,21 @@ const data = [
   },
   {
     id: "28",
-    title: "Transição Capilar",
+    title: "Corte regular",
     image: require("../assets/cards/corte.png"),
     link: "/content/card28",
   },
   {
     id: "29",
-    title: "Hidratação Pós-Sol",
-    image: require("../assets/cards/posol.jpg"),
-    link: "/content/card6",
+    title: "Secagem rápida",
+    image: require("../assets/cards/secagem.png"),
+    link: "/content/card29",
   },
   {
     id: "30",
-    title: "Transição Capilar",
-    image: require("../assets/cards/transicao.jpg"),
-    link: "/content/card5",
+    title: "Controle de Oleosidade",
+    image: require("../assets/cards/oleoso.png"),
+    link: "/content/card30",
   },
 
 ];
