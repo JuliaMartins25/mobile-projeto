@@ -8,7 +8,7 @@ const Card8 = () => {
                 <Image
                     source={{ uri: 'https://i.pinimg.com/736x/f6/55/0a/f6550a8edbafec3c56b2657761c7e480.jpg' }}
                     style={styles.image}
-                    resizeMode='contain'
+                    
                 />
                 <Text style={styles.title}>Lavagem ao Contrário (Reverse Washing): </Text>
                 <Text style={styles.description}>
@@ -87,10 +87,10 @@ const styles = StyleSheet.create({
         maxWidth: 360, // Limite de largura
     },
     image: {
-        width: '100%',
-        height: 200,
-        borderRadius: 12,
+        width: 290,
+        height: 300,
         marginBottom: 16,
+        borderRadius: 70,
     },
     title: {
         fontSize: 22,

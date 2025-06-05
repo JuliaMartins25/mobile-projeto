@@ -1,18 +1,20 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 
 const Card2 = () => {
     return (
         <View style={styles.container}>
             <ScrollView contentContainerStyle={styles.card} showsVerticalScrollIndicator={false}>
+                <Image
+                    source={{ uri: 'https://i.pinimg.com/736x/1f/0a/5f/1f0a5fe0c29f14a0a1a7bfb41b239c2c.jpg' }}
+                    style={styles.image}
+                />
                 <Text style={styles.title}>Cabelo Poroso</Text>
 
                 <Text style={styles.sectionTitle}>O que é cabelo poroso?</Text>
                 <Text style={styles.description}>
-                    Fios com cutículas abertas, que não retêm nutrientes e hidratação.
-                    {"\n\n"}
-                    Resultado de excesso de química, calor (secador/chapinha) e exposição solar.
-                    {"\n\n"}
+                    Fios com cutículas abertas, que não retêm nutrientes e hidratação.{"\n\n"}
+                    Resultado de excesso de química, calor (secador/chapinha) e exposição solar.{"\n\n"}
                     Apresenta-se como cabelo áspero, sem brilho, frágil e com frizz.
                 </Text>
 
@@ -69,6 +71,10 @@ const Card2 = () => {
                     <Text style={styles.bold}>Nutrição:</Text> repõe lipídios, evita frizz e melhora brilho.{"\n\n"}
                     <Text style={styles.bold}>Reconstrução:</Text> repõe massa capilar e fortalece a fibra.
                 </Text>
+
+                <Text style={styles.extra}>
+                    Dica: use sempre produtos adequados ao nível de porosidade e evite excessos de reconstrução, que podem enrijecer os fios.
+                </Text>
             </ScrollView>
         </View>
     );
@@ -94,15 +100,21 @@ const styles = StyleSheet.create({
         margin: 24,
         width: 340,
     },
+    image: {
+        width: 300,
+        height: 300,
+        marginBottom: 16,
+        borderRadius: 70,
+    },
     title: {
-        fontSize: 22,
+        fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 16,
         color: '#A2D2FF',
         textAlign: 'center',
     },
     sectionTitle: {
-        fontSize: 17,
+        fontSize: 18,
         fontWeight: 'bold',
         color: '#F96380',
         marginTop: 18,
@@ -118,6 +130,12 @@ const styles = StyleSheet.create({
     bold: {
         fontWeight: 'bold',
         color: '#F96380',
+    },
+    extra: {
+        color: '#F96380',
+        fontStyle: 'italic',
+        fontSize: 14,
+        marginBottom: 10,
     },
 });
 
