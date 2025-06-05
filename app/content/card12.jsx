@@ -6,9 +6,9 @@ const Card12 = () => {
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/736x/f6/55/0a/f6550a8edbafec3c56b2657761c7e480.jpg' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/4d/59/e4/4d59e446155bf3a2c3752ae3f1fb6bda.jpg' }}
                     style={styles.image}
-                    resizeMode='contain'
+                    
                 />
                 <Text style={styles.title}>Personalização de tratamentos com misturinhas:</Text>
                 <Text style={styles.description}>
@@ -27,37 +27,70 @@ const Card12 = () => {
                     ➡️Opte por uma máscara de hidratação ou nutrição de fórmula mais leve e sem parafina ou petrolatos, que permitem a melhor absorção dos ativos naturais.{"\n"}
                     ➡️Priorize aquelas com ingredientes hidratantes, como babosa, pantenol ou glicerina. 
                 </Text>
-                <Text style={styles.sectionTitle}>Enxágue completo:</Text>
+                <Text style={styles.sectionTitle}>Seleção dos ativos extras:</Text>
                 <Text style={styles.description}>
-                    - Remova bem o produto com água morna, garantindo que não fiquem resíduos que possam pesar os fios.{"\n"}
+                    Óleos essenciais: são altamente concentrados, exigindo uso moderado e responsável.{"\n"}
+                    ✅Lavanda: promove efeito calmante no couro cabeludo, ideal para quem sofre com coceira, sensibilidade ou queda por estresse.{"\n"}
+                    ✅Alecrim: estimula a circulação sanguínea, potencializando o crescimento capilar e combatendo a queda.{"\n"}
+                    ✅Hortelã-pimenta: promove sensação de frescor e pode ativar a oxigenação no couro cabeludo.{"\n\n"}
+                    Óleos vegetais: promovem nutrição profunda ao fio, selando a hidratação e protegendo contra a perda de água.{"\n"}
+                    ✅Óleo de coco: ótimo para cabelos secos, com alta capacidade de penetração na fibra capilar.{"\n"}
+                    ✅Óleo de rícino: fortalece os fios e auxilia no crescimento.{"\n"}
+                    ✅Óleo de argan: ideal para dar brilho e maciez, além de combater o frizz.
                 </Text> 
-                <Text style={styles.sectionTitle}>Aplicação do shampoo:</Text>
+                <Text style={styles.sectionTitle}>Proporção ideal:</Text>
                 <Text style={styles.description}>
-                    - Agora sim, aplique um shampoo suave, preferencialmente com pH fisiológico e livre de sulfatos agressivos, apenas na raiz e no couro cabeludo.{"\n"}
-                    - Massageie suavemente com as pontas dos dedos para estimular a circulação sanguínea e realizar a higienização adequada.{"\n"}
-                    - Deixe que a espuma formada desça naturalmente para o comprimento, sem esfregar os fios, evitando fricção desnecessária.
+                    ➡️Para cada 2 colheres de sopa de máscara capilar:{"\n"}
+                    - Adicione 2 a 3 gotas de óleo essencial (não exceda para evitar efeitos adversos).{"\n"}
+                    - Adicione até 1 colher de chá de óleo vegetal, conforme o grau de ressecamento do cabelo.{"\n"}
                 </Text> 
-                <Text style={styles.sectionTitle}>Enxágue final:</Text>
+                <Text style={styles.sectionTitle}>Mistura:</Text>
                 <Text style={styles.description}>
-                    - Remova completamente o shampoo com água fria ou morna, selando as cutículas e promovendo brilho.{"\n"}
+                    ➡️Em um recipiente não metálico, misture bem todos os ingredientes até formar um creme homogêneo.{"\n"}
                 </Text> 
-                <Text style={styles.sectionTitle}>Benefícios da Lavagem ao Contrário:</Text>
+                <Text style={styles.sectionTitle}>Aplicação:</Text>
                 <Text style={styles.description}>
-                    ✅Leveza e movimento: ao criar uma barreira protetora com o condicionador ou máscara, evita-se que o shampoo retire totalmente os lipídios naturais, preservando a maciez sem comprometer a leveza.{"\n"}
-                    ✅Controle da oleosidade: ao higienizar apenas a raiz, impede-se o acúmulo excessivo de resíduos no comprimento, beneficiando quem possui cabelos finos ou com tendência à oleosidade.{"\n"}
-                    ✅Menos embaraço: pré-condicionar os fios facilita o desembaraço e reduz a quebra causada pelo atrito durante a lavagem.{"\n"}
-                    ✅Equilíbrio ideal: mantém os fios hidratados, sem aspecto pesado e opaco que algumas máscaras podem causar em cabelos delicados.{"\n"}
+                    ➡️Após lavar o cabelo com shampoo, retire o excesso de água com uma toalha.{"\n"}
+                    ➡️Aplique a misturinha mecha por mecha, enluvando bem para garantir a penetração dos ativos.{"\n"}
+                    ➡️Deixe agir de acordo com o tempo recomendado pela máscara base (geralmente de 10 a 20 minutos).{"\n"}
+                    ➡️Enxágue abundantemente, finalizando como de costume.
                 </Text>
-                <Text style={styles.sectionTitle}>Indicação:</Text>
-                <Text style={styles.sectionTitle}>Perfeito para cabelos:</Text>
+                <Text style={styles.sectionTitle}>Benefícios das misturinhas capilares:</Text>
                 <Text style={styles.description}>
-                    ➡️Finos ou muito lisos, que facilmente ficam "lambidos" ou com aspecto oleoso.{"\n"}
-                    ➡️Oleosos na raiz e secos nas pontas (cabelos mistos){"\n"}
-                    ➡️Que sofrem com falta de volume ou que precisam de mais leveza e movimento.
+                    ✅Ação personalizada: trata problemas específicos como queda, ressecamento, quebra ou falta de brilho.{"\n"}
+                    ✅Aromaterapia integrada: os aromas dos óleos essenciais influenciam positivamente no humor e na sensação de relaxamento durante o tratamento.{"\n"}
+                    ✅Fortalecimento capilar: ingredientes naturais fortalecem e nutrem profundamente os fios.{"\n"}
+                    ✅Prevenção de danos: cria uma camada protetora que reduz agressões futuras, como calor ou poluição.
                 </Text>
-                <Text style={styles.sectionTitle}>Dica extra:</Text>
+                <Text style={styles.sectionTitle}>Cuidados importantes:</Text>
                 <Text style={styles.description}>
-                Se quiser potencializar ainda mais a técnica, após o shampoo, pode aplicar um leave-in leve ou um spray de proteção térmica, especialmente se for usar secador. Assim, garante proteção adicional sem pesar nos fios.
+                ⚠️Sempre faça um teste de sensibilidade na pele antes de usar óleos essenciais, para evitar reações alérgicas.{"\n"}
+                ⚠️Não utilize óleos essenciais puros diretamente no couro cabeludo ou nos fios, pois podem causar irritação.{"\n"}
+                ⚠️Evite misturar ativos incompatíveis ou de ação oposta (ex.: proteínas em excesso podem deixar o fio rígido).{"\n"}
+                ⚠️Utilize óleos essenciais de qualidade, preferencialmente 100% puros e naturais.
+                </Text>
+                <Text style={styles.sectionTitle}>Exemplos de misturinhas conforme a necessidade:</Text>
+                <Text style={styles.sectionTitle}>➡️Para cabelos ressecados:</Text>
+                <Text style={styles.description}>
+                Máscara hidratante + óleo de coco + óleo essencial de lavanda.
+                </Text>
+                <Text style={styles.sectionTitle}>➡️Para estimular crescimento:</Text>
+                <Text style={styles.description}>
+                Máscara fortalecedora + óleo de rícino + óleo essencial de alecrim.
+                </Text>
+                <Text style={styles.sectionTitle}>➡️Para controle de oleosidade:</Text>
+                <Text style={styles.description}>
+                Máscara leve + 1 gota de óleo essencial de tea tree (melaleuca) + óleo essencial de hortelã.
+                </Text>
+                <Text style={styles.sectionTitle}>➡️Para brilho intenso:</Text>
+                <Text style={styles.description}>
+                Máscara nutritiva + óleo de argan + óleo essencial de ylang-ylang.
+                </Text>
+                <Text style={styles.sectionTitle}>Quem pode fazer misturinhas?</Text>
+                <Text style={styles.description}>
+                ✔️Todos os tipos de cabelo: lisos, ondulados, cacheados e crespos.{"\n"}
+                ✔️Especialmente recomendado para quem busca tratamentos mais naturais e personalizados.{"\n"}
+                ✔️Ideal para quem deseja potencializar produtos sem gastar muito.
                 </Text>
             </View>
         </ScrollView>
