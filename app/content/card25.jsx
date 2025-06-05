@@ -1,38 +1,33 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
-const Card23 = () => {
+const Card25 = () => {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/736x/ab/cf/de/abcfded76998caa83299eee8581edf60.jpg' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/36/f3/2e/36f32e507e53328f04d81a41718f4f49.jpg' }}
                     style={styles.image}
                 />
                 <Text style={styles.title}>
-                    Tratamento detox capilar: renovação profunda para couro cabeludo e fios
+                    Desembaraço correto: menos quebra e mais saúde
                 </Text>
                 <Text style={styles.description}>
-                    O acúmulo de resíduos de produtos, oleosidade e poluentes prejudica a saúde capilar, podendo causar queda, dermatites e obstrução dos folículos.
+                    Pentear os cabelos de forma inadequada, especialmente quando molhados, pode causar danos estruturais e quebra.
                 </Text>
 
                 <Text style={styles.sectionTitle}>Como fazer:</Text>
                 <Text style={styles.description}>
-                    - A cada 15 dias, use um shampoo detox ou esfoliante capilar.{"\n"}
-                    - Aplique no couro cabeludo úmido, massageando suavemente com as pontas dos dedos.{"\n"}
-                    - Enxágue bem e prossiga com hidratação, pois o detox pode deixar os fios mais "abertos".
-                </Text>
-
-                <Text style={styles.sectionTitle}>✅ Dica extra:</Text>
-                <Text style={styles.description}>
-                    Finalize com um condicionador ou máscara de pH baixo para selar as cutículas.
+                    - Antes de pentear, aplique um creme de pentear ou leave-in para criar uma camada protetora.{"\n"}
+                    - Use pentes de dentes largos ou escovas específicas para desembaraçar, como a "escova de desembaraço" ou "tangle teezer".{"\n"}
+                    - Comece sempre das pontas, subindo gradualmente até a raiz, evitando forçar os fios.
                 </Text>
 
                 <Text style={styles.sectionTitle}>✅ Benefícios:</Text>
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>1. Limpeza profunda e sensação refrescante.</Text>{"\n"}
-                    <Text style={styles.bold}>2. Estímulo à circulação do couro cabeludo.</Text>{"\n"}
-                    <Text style={styles.bold}>3. Melhora na absorção de tratamentos.</Text>
+                    <Text style={styles.bold}>1. Menos quebra e formação de nós.</Text>{"\n"}
+                    <Text style={styles.bold}>2. Fios mais alinhados e macios.</Text>{"\n"}
+                    <Text style={styles.bold}>3. Redução do frizz.</Text>
                 </Text>
             </View>
         </ScrollView>
@@ -95,4 +90,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Card23;
+export default Card25;

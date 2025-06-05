@@ -1,38 +1,41 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
-const Card23 = () => {
+const Card29 = () => {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/736x/ab/cf/de/abcfded76998caa83299eee8581edf60.jpg' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/7d/a2/08/7da208f549c72ab750ffb2e56188805e.jpg' }}
                     style={styles.image}
                 />
                 <Text style={styles.title}>
-                    Tratamento detox capilar: renovação profunda para couro cabeludo e fios
+                    Secagem rápida e saudável para o dia a dia
                 </Text>
                 <Text style={styles.description}>
-                    O acúmulo de resíduos de produtos, oleosidade e poluentes prejudica a saúde capilar, podendo causar queda, dermatites e obstrução dos folículos.
+                    No dia a dia corrido, muitos homens recorrem à secagem rápida com toalha ou ao ar livre. Porém, a forma incorreta de secar os fios pode causar frizz, quebra e agressão ao couro cabeludo. A secagem adequada preserva a saúde capilar e melhora a aparência dos fios.
                 </Text>
 
                 <Text style={styles.sectionTitle}>Como fazer:</Text>
                 <Text style={styles.description}>
-                    - A cada 15 dias, use um shampoo detox ou esfoliante capilar.{"\n"}
-                    - Aplique no couro cabeludo úmido, massageando suavemente com as pontas dos dedos.{"\n"}
-                    - Enxágue bem e prossiga com hidratação, pois o detox pode deixar os fios mais "abertos".
-                </Text>
-
-                <Text style={styles.sectionTitle}>✅ Dica extra:</Text>
-                <Text style={styles.description}>
-                    Finalize com um condicionador ou máscara de pH baixo para selar as cutículas.
+                    - Após o banho, pressione suavemente os fios com uma toalha de microfibra ou algodão.{"\n"}
+                    ➡ Evite esfregar com força, pois isso gera frizz e pode quebrar os fios mais finos.{"\n\n"}
+                    - Se optar pelo secador, use sempre um protetor térmico antes, mesmo para cabelos curtos.{"\n"}
+                    - Mantenha o secador a uma distância de, no mínimo, 15 cm da raiz.{"\n"}
+                    - Prefira o modo morno ou frio, evitando o calor excessivo que agride os fios e o couro cabeludo.{"\n"}
+                    - Finalize com as mãos ou um pente, alinhando suavemente os fios.
                 </Text>
 
                 <Text style={styles.sectionTitle}>✅ Benefícios:</Text>
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>1. Limpeza profunda e sensação refrescante.</Text>{"\n"}
-                    <Text style={styles.bold}>2. Estímulo à circulação do couro cabeludo.</Text>{"\n"}
-                    <Text style={styles.bold}>3. Melhora na absorção de tratamentos.</Text>
+                    <Text style={styles.bold}>1. Prevenção do frizz e da quebra.</Text>{"\n"}
+                    <Text style={styles.bold}>2. Couro cabeludo saudável, livre de agressões térmicas.</Text>{"\n"}
+                    <Text style={styles.bold}>3. Aparência mais alinhada e sofisticada.</Text>
+                </Text>
+
+                <Text style={styles.sectionTitle}>✅ Dica extra:</Text>
+                <Text style={styles.description}>
+                    Para quem tem fios finos e quer mais volume, seque os cabelos inclinando a cabeça para frente, direcionando o ar das pontas para a raiz.
                 </Text>
             </View>
         </ScrollView>
@@ -95,4 +98,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Card23;
+export default Card29;

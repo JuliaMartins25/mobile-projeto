@@ -1,38 +1,40 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
-const Card23 = () => {
+const Card30 = () => {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/736x/ab/cf/de/abcfded76998caa83299eee8581edf60.jpg' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/0d/ae/99/0dae998e278d6f6b4c984add9df89bc7.jpg' }}
                     style={styles.image}
                 />
                 <Text style={styles.title}>
-                    Tratamento detox capilar: renovação profunda para couro cabeludo e fios
+                    Controle de Oleosidade com Shampoos Específicos
                 </Text>
                 <Text style={styles.description}>
-                    O acúmulo de resíduos de produtos, oleosidade e poluentes prejudica a saúde capilar, podendo causar queda, dermatites e obstrução dos folículos.
+                    A oleosidade excessiva é um dos principais desafios para quem tem cabelos curtos e masculinos. Isso ocorre devido à maior atividade das glândulas sebáceas, principalmente em homens jovens e adultos. O uso de shampoos específicos para controle de oleosidade é essencial para manter o couro cabeludo limpo, saudável e livre de caspa e seborreia.
                 </Text>
 
                 <Text style={styles.sectionTitle}>Como fazer:</Text>
                 <Text style={styles.description}>
-                    - A cada 15 dias, use um shampoo detox ou esfoliante capilar.{"\n"}
-                    - Aplique no couro cabeludo úmido, massageando suavemente com as pontas dos dedos.{"\n"}
-                    - Enxágue bem e prossiga com hidratação, pois o detox pode deixar os fios mais "abertos".
-                </Text>
-
-                <Text style={styles.sectionTitle}>✅ Dica extra:</Text>
-                <Text style={styles.description}>
-                    Finalize com um condicionador ou máscara de pH baixo para selar as cutículas.
+                    - Escolha um shampoo com ativos como zinco, ácido salicílico ou extratos botânicos adstringentes (ex.: chá verde, hamamélis).{"\n\n"}
+                    - Lave o cabelo em dias alternados para evitar o efeito rebote, que aumenta a produção de óleo.{"\n\n"}
+                    - Massageie bem o couro cabeludo com as pontas dos dedos, promovendo uma limpeza eficaz, mas sem agressividade.{"\n\n"}
+                    - Enxágue completamente para não deixar resíduos que podem obstruir os folículos.{"\n\n"}
+                    - Finalize com condicionador apenas nas pontas, se os fios estiverem ressecados.
                 </Text>
 
                 <Text style={styles.sectionTitle}>✅ Benefícios:</Text>
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>1. Limpeza profunda e sensação refrescante.</Text>{"\n"}
-                    <Text style={styles.bold}>2. Estímulo à circulação do couro cabeludo.</Text>{"\n"}
-                    <Text style={styles.bold}>3. Melhora na absorção de tratamentos.</Text>
+                    <Text style={styles.bold}>1. Redução da oleosidade sem ressecar os fios.</Text>{"\n"}
+                    <Text style={styles.bold}>2. Prevenção de caspa, dermatite seborreica e queda capilar.</Text>{"\n"}
+                    <Text style={styles.bold}>3. Sensação de limpeza e leveza prolongada.</Text>
+                </Text>
+
+                <Text style={styles.sectionTitle}>✅ Dica extra:</Text>
+                <Text style={styles.description}>
+                    Evite água muito quente, que estimula ainda mais a produção de sebo. Prefira água morna ou fria.
                 </Text>
             </View>
         </ScrollView>
@@ -95,4 +97,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Card23;
+export default Card30;
