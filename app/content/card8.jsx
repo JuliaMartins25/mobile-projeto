@@ -6,7 +6,7 @@ const Card8 = () => {
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/736x/d8/7f/72/d87f722e70b4a44253a6d7df893ca557.jpg' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/f6/55/0a/f6550a8edbafec3c56b2657761c7e480.jpg' }}
                     style={styles.image}
                     resizeMode='contain'
                 />
@@ -44,13 +44,19 @@ const Card8 = () => {
                 <Text style={styles.description}>
                     ✅Leveza e movimento: ao criar uma barreira protetora com o condicionador ou máscara, evita-se que o shampoo retire totalmente os lipídios naturais, preservando a maciez sem comprometer a leveza.{"\n"}
                     ✅Controle da oleosidade: ao higienizar apenas a raiz, impede-se o acúmulo excessivo de resíduos no comprimento, beneficiando quem possui cabelos finos ou com tendência à oleosidade.{"\n"}
-                    ✅ Menos embaraço: pré-condicionar os fios facilita o desembaraço e reduz a quebra causada pelo atrito durante a lavagem.{"\n"}
-                    ✅Facilidade no desembaraço: diminui a formação de nós e facilita o penteado pós-lavagem.{"\n"}
-                    ✅Ideal para cabelos quimicamente tratados: especialmente indicado para quem faz colorações, alisamentos, ou usa fontes de calor com frequência, pois essas práticas tornam os fios mais vulneráveis à perda de massa capilar.{"\n"} 
+                    ✅Menos embaraço: pré-condicionar os fios facilita o desembaraço e reduz a quebra causada pelo atrito durante a lavagem.{"\n"}
+                    ✅Equilíbrio ideal: mantém os fios hidratados, sem aspecto pesado e opaco que algumas máscaras podem causar em cabelos delicados.{"\n"}
+                </Text>
+                <Text style={styles.sectionTitle}>Indicação:</Text>
+                <Text style={styles.sectionTitle}>Perfeito para cabelos:</Text>
+                <Text style={styles.description}>
+                    ➡️Finos ou muito lisos, que facilmente ficam "lambidos" ou com aspecto oleoso.{"\n"}
+                    ➡️Oleosos na raiz e secos nas pontas (cabelos mistos){"\n"}
+                    ➡️Que sofrem com falta de volume ou que precisam de mais leveza e movimento.
                 </Text>
                 <Text style={styles.sectionTitle}>Dica extra:</Text>
                 <Text style={styles.description}>
-                Em cabelos cacheados e crespos, que naturalmente possuem maior tendência ao ressecamento, o pre-poo deve ser incorporado como uma etapa regular da rotina capilar. Já para cabelos oleosos, recomenda-se optar por cremes leves ou óleos menos densos, como o de jojoba, e evitar exageros na quantidade.
+                Se quiser potencializar ainda mais a técnica, após o shampoo, pode aplicar um leave-in leve ou um spray de proteção térmica, especialmente se for usar secador. Assim, garante proteção adicional sem pesar nos fios.
                 </Text>
             </View>
         </ScrollView>
