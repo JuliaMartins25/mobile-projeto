@@ -8,7 +8,7 @@ const Card4 = () => {
                 <Image source={require("../../assets/img4.png")} style={styles.image} resizeMode="cover" />
                 <Text style={styles.title}>Solução para Fios Ressecados</Text>
                 <Text style={styles.description}>
-                  Hidratação com Maionese Caseira: Nutrição Power para Fios Ressecados
+                    Hidratação com Maionese Caseira: Nutrição Power para Fios Ressecados
                 </Text>
                 <Text style={styles.description}>
                     Você já ouviu falar em usar maionese no cabelo? Pode parecer estranho à primeira vista, mas acredite: essa é uma dica antiga e poderosa para recuperar cabelos ressecados e sem vida. A maionese é rica em óleos vegetais, ovos e vinagre, ingredientes que juntos oferecem nutrição intensa, brilho e maciez. Ela age diretamente na fibra capilar, devolvendo lipídios perdidos e promovendo uma hidratação profunda com efeito duradouro.
