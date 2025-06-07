@@ -6,7 +6,7 @@ const Card15 = () => {
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/736x/f6/55/0a/f6550a8edbafec3c56b2657761c7e480.jpg' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/cf/ac/67/cfac671d0bae1532f3f5bb0567f1cea2.jpg' }}
                     style={styles.image}
                     
                 />
