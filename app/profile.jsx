@@ -12,7 +12,7 @@ export default function Profile() {
         <ScrollView style={styles.container}>
 
             <View style={styles.header}>
-            
+
             </View>
 
             {/* Centralizar a imagem de perfil */}
@@ -24,9 +24,14 @@ export default function Profile() {
             </View>
 
             <Text style={styles.username}>Usuário123</Text>
+            <View style={styles.bioContainer}>
+            <Text style={styles.bio}>
+                Amante dos cuidados com cabelo. Compartilhando transformações por aqui! 💇‍♂️✨
+            </Text>
+            </View>
             <TouchableOpacity
                 style={styles.editButton}
-                onPress={() => navigation.navigate("editProfile")} 
+                onPress={() => navigation.navigate("editProfile")}
             >
                 <Text style={styles.editButtonText}>Editar perfil</Text>
             </TouchableOpacity>
@@ -196,4 +201,21 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: "#333",
     },
+    bioContainer: {
+        marginTop: 8,
+        paddingHorizontal: 24,
+        paddingVertical: 10,
+        backgroundColor: "#ffb6c1", 
+        opacity: 0.8,
+        borderRadius: 12,
+        marginHorizontal: 40,
+    },
+    
+    bio: {
+        fontSize: 14,
+        fontStyle: "italic",
+        color: "#333",
+        textAlign: "center",
+        lineHeight: 20,
+    }
 });
