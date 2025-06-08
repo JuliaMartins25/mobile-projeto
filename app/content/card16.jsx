@@ -77,10 +77,10 @@ const styles = StyleSheet.create({
         maxWidth: 360, // Limite de largura
     },
     image: {
-        width: 320,
+        width: 280,
         height: 300,
         marginBottom: 16,
-        borderRadius: 70,
+        borderRadius: 10,
     },
     title: {
         fontSize: 22,

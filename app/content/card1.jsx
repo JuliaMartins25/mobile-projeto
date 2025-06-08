@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     maxWidth: 360,
   },
   image: {
-    width: 320,
+    width: 280,
     height: 300,
     borderRadius: 12,
     marginBottom: 20,

@@ -5,7 +5,10 @@ const Card4 = () => {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
-                <Image source={require("../../assets/img4.png")} style={styles.image} resizeMode="cover" />
+                <Image
+                    source={{ uri: 'https://i.pinimg.com/736x/9b/42/90/9b429093a6838d134c1553ce83759b81.jpg' }}
+                    style={styles.image}
+                />
                 <Text style={styles.title}>Solução para Fios Ressecados</Text>
                 <Text style={styles.description}>
                     Hidratação com Maionese Caseira: Nutrição Power para Fios Ressecados
@@ -73,10 +76,10 @@ const styles = StyleSheet.create({
         maxWidth: 340, // Limite de largura
     },
     image: {
-        width: '100%',
-        height: 200,
-        borderRadius: 16,
-        marginBottom: 16,
+        width: 270,
+        height: 300,
+        borderRadius: 12,
+        marginBottom: 20,
     },
     title: {
         fontSize: 24,

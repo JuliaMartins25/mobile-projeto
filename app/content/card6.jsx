@@ -6,12 +6,13 @@ const Card6 = () => {
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: 'https://br.pinterest.com/pin/446137906854520962/' }}
+                    source={{ uri: 'https://i.pinimg.com/736x/29/b4/8e/29b48e9fa2fc23bea0a12388d57e15a0.jpg' }}
                     style={styles.image}
                 />
                 <Text style={styles.title}>
                     Hidratação Pós-Sol: Como Recuperar o Cabelo Depois da Praia ou Piscina
                 </Text>
+
                 <Text style={styles.description}>
                     Sol escaldante, água salgada do mar, cloro da piscina... tudo isso é uma delícia para o corpo e a alma — mas para o cabelo? Nem tanto. A exposição excessiva a esses elementos resseca, desbota, embaraça e enfraquece os fios. O resultado: aquele cabelo opaco, áspero e sem vida.
                 </Text>
@@ -25,22 +26,22 @@ const Card6 = () => {
 
                 <Text style={styles.sectionTitle}>✅ Dicas para Recuperar o Cabelo Pós-Sol:</Text>
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>1. Lave com shampoo detox suave</Text>{"\n"}
-                    Depois de um dia de praia ou piscina, o ideal é remover resíduos de sal, areia, cloro e protetor solar capilar. Um shampoo detox leve limpa profundamente sem agredir, preparando os fios para absorver melhor os tratamentos.{"\n"}
+                    <Text style={styles.bold}>1. Lave com shampoo detox suave:</Text>{"\n"}
+                    Depois de um dia de praia ou piscina, o ideal é remover resíduos de sal, areia, cloro e protetor solar capilar.{"\n"}
                     🧴 Evite shampoos com sulfato agressivo. Prefira fórmulas suaves e com extratos naturais como chá verde, babosa ou gengibre.
                 </Text>
 
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>2. Faça uma hidratação profunda com ingredientes calmantes</Text>{"\n"}
-                    Após a limpeza, é hora de devolver água e nutrientes aos fios. Aposte em máscaras hidratantes com ingredientes calmantes e regeneradores como:{"\n"}
+                    <Text style={styles.bold}>2. Faça uma hidratação profunda com ingredientes calmantes:</Text>{"\n"}
+                    Após a limpeza, é hora de devolver água e nutrientes aos fios. Aposte em máscaras hidratantes com ingredientes regeneradores como:{"\n"}
                     - Iogurte natural ou leite de coco (nutrição e emoliência){"\n"}
                     - Mel (hidratante natural e antioxidante){"\n"}
-                    - Babosa (aloe vera) (calmante e cicatrizante)
+                    - Babosa (calmante e cicatrizante)
                 </Text>
 
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>3. Finalize com leave-in com proteção UV</Text>{"\n"}
-                    Assim como a pele, o cabelo também precisa de proteção solar. Um leave-in com filtro UV forma uma barreira contra os raios solares e impede que a hidratação vá embora rapidinho.{"\n"}
+                    <Text style={styles.bold}>3. Finalize com leave-in com proteção UV:</Text>{"\n"}
+                    Assim como a pele, o cabelo também precisa de proteção solar. Um leave-in com filtro UV forma uma barreira contra os raios solares e impede que a hidratação vá embora rapidamente.{"\n"}
                     🌞 Bônus: ele também ajuda a desembaraçar, definir e proteger do vento!
                 </Text>
 
@@ -50,6 +51,7 @@ const Card6 = () => {
                     - 2 colheres de iogurte natural (sem açúcar){"\n"}
                     - 1 colher de mel puro{"\n"}
                     - 2 colheres da sua máscara hidratante preferida{"\n\n"}
+
                     <Text style={styles.bold}>Modo de preparo e uso:</Text>{"\n"}
                     1. Misture todos os ingredientes até formar um creme homogêneo.{"\n"}
                     2. Aplique nos cabelos lavados e úmidos, enluvando mecha por mecha.{"\n"}
@@ -60,7 +62,7 @@ const Card6 = () => {
 
                 <Text style={styles.sectionTitle}>✨ Produtos Salvadores Pós-Sol:</Text>
                 <Text style={styles.description}>
-                    <Text style={styles.bold}>Elseve Hidra Detox (L’Oréal Paris):</Text> Combina purificação suave da raiz com hidratação leve no comprimento. Perfeito para quem precisa limpar sem ressecar ainda mais.{"\n"}
+                    <Text style={styles.bold}>Elseve Hidra Detox (L’Oréal Paris):</Text> Combina purificação suave da raiz com hidratação leve no comprimento.{"\n"}
                     <Text style={styles.bold}>Creme Multifuncional #TôDeCacho Verão (Salon Line):</Text> Tem proteção UV, é multifuncional (hidrata, finaliza e trata), e foi feito especialmente para cuidar dos fios expostos ao sol e mar.
                 </Text>
             </View>
@@ -92,7 +94,7 @@ const styles = StyleSheet.create({
         maxWidth: 360,
     },
     image: {
-        width: 290,
+        width: 280,
         height: 300,
         borderRadius: 12,
         marginBottom: 20,

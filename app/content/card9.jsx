@@ -8,7 +8,7 @@ const Card9 = () => {
                 <Image
                     source={{ uri: 'https://i.pinimg.com/736x/a2/5f/03/a25f0311328c83629f7b0153154cd91d.jpg' }}
                     style={styles.image}
-                    resizeMode='contain'
+                    
                 />
                 <Text style={styles.title}>Técnica Plopping para definição de cachos:</Text>
                 <Text style={styles.description}>
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         maxWidth: 360, // Limite de largura
     },
     image: {
-        width: 320,
+        width: 280,
         height: 300,
         borderRadius: 12,
         marginBottom: 20,
