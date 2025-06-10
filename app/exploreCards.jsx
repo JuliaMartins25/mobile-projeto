@@ -142,7 +142,7 @@ const data = [
   },
   {
     id: "22",
-    title: "Transição capilar",
+    title: "Fronha de cetim",
     image: require("../assets/cards/fronha.png"),
     link: "/content/card22",
   },
